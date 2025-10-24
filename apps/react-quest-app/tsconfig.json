@@ -1,0 +1,14 @@
+// apps/react-quest-app/tsconfig.json
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["vite/client", "node"],
+    "noEmit": true
+  },
+  "include": [
+    "src", 
+    "vite.config.ts",
+    "../../packages/quest-player/src/custom.d.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
+}
