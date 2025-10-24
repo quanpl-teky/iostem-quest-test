@@ -117,7 +117,7 @@
       "crystal": 1,
       "switch": 1
     },
-    "optimalBlocks": 8
+    "optimalBlocks": 11
   },
   "sounds": {
     "win": "/assets/maze/win.mp3",
