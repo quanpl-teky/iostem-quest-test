@@ -1,0 +1,27 @@
+{
+  "name": "react-quest-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "turbo": "latest"
+  },
+  "packageManager": "pnpm@9.1.1",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "pnpm": {
+    "overrides": {
+      "blockly": "12.3.1",
+      "three": "^0.162.0",
+      "@types/three": "^0.162.0"
+    }
+  },
+  "version": "0.0.1"
+}
