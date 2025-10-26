@@ -1,12 +1,1286 @@
 
-> @repo/react-quest-app@1.0.0 dev /Users/mac/Downloads/react-quest-monorepo-main 2/apps/react-quest-app
+> @repo/react-quest-app@1.0.0 dev /Users/mac/Downloads/Project-BuildMapWithBlocks/apps/react-quest-app
 > vite
 
-Port 5173 is in use, trying another one...
 [36m[vite-plugin-static-copy][39m [32mCollected 1 items.[39m
 
-  [32m[1mVITE[22m v5.4.20[39m  [2mready in [0m[1m1435[22m[2m[0m ms[22m
+  [32m[1mVITE[22m v5.4.20[39m  [2mready in [0m[1m545[22m[2m[0m ms[22m
 
-  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5174[22m/[39m
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
 [2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
 [2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:20 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:20 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:20 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:20 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:20 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x5)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:20 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x6)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:20 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x7)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:20 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x8)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:20 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x9)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:20 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x10)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:20 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x11)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:20 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x12)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:21 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x13)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:21 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x14)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:21 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x15)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:21 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x16)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:21 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x17)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:21 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x18)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:21 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x19)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:22 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x20)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:22 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x21)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x22)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x23)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x24)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x25)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x26)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x27)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x28)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x29)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../quests/topic04-10-coordinate-math-var1.json" from "src/App.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/mac/Downloads/Project-BuildMapWithBlocks/apps/react-quest-app/src/App.tsx[39m:211:41
+[33m  1  |  import * as __vite_glob_0_0 from "../quests/maze-3d-3.json";import * as __vite_glob_0_1 from "../quests/testmap-L-shape.json";import * as __vite_glob_0_2 from "../quests/testmap.json";import * as __vite_glob_0_3 from "../quests/topic04-10-coordinate-math-var1.json";import * as __vite_glob_0_4 from "../quests/topic04-11-fixbug-optimization-var1.json";import * as __vite_glob_0_5 from "../quests/topic04-12-coordinate-math-adv-var1.json";import * as __vite_glob_0_6 from "../quests/topic04-13-dynamic-repeat-var1.json";import * as __vite_glob_0_7 from "../quests/topic04-14-fixbug-math-expression-var1.json";import * as __vite_glob_0_8 from "../quests/topic04-15-dynamic-repeat-adv-var1.json";import * as __vite_glob_0_9 from "../quests/topic04-16-fibonacci-pattern-var1.json";import * as __vite_glob_0_10 from "../quests/topic04-17-fixbug-fibonacci-var1.json";import * as __vite_glob_0_11 from "../quests/topic04-18-fibonacci-adv-var1.json";import * as __vite_glob_0_12 from "../quests/topic04-19-config-driven-var1.json";import * as __vite_glob_0_13 from "../quests/topic04-20-fixbug-optimization-var1.json";import * as __vite_glob_0_14 from "../quests/topic04-21-math-puzzles-var1.json";import * as __vite_glob_0_15 from "../quests/topic08-req01-wall-follower-var1.json";import * as __vite_glob_0_16 from "../quests/topic10-req01-debug-param-var1.json";import * as __vite_glob_0_17 from "../quests/topic10-req01-debug-param-var2.json";import * as __vite_glob_0_18 from "../quests/topic10-req02-debug-param-var1.json";import * as __vite_glob_0_19 from "../quests/topic10-req02-debug-param-var2.json";import * as __vite_glob_0_20 from "../quests/topic10-req03-debug-order-var1.json";import * as __vite_glob_0_21 from "../quests/topic10-req03-debug-order-var2.json";import * as __vite_glob_0_22 from "../quests/topic10-req04-debug-missing-var1.json";import * as __vite_glob_0_23 from "../quests/topic10-req04-debug-missing-var2.json";import { jsxDEV } from "react/jsx-dev-runtime";
+     |                                                                                                                                                                                                                            ^
+  2  |  import * as RefreshRuntime from "/@react-refresh";
+  3  |  const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;[39m
+      at TransformPluginContext._formatError (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49258:41)
+      at TransformPluginContext.error (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49253:16)
+      at normalizeUrl (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64306:23)
+      at async file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64438:39
+      at async Promise.all (index 3)
+      at async TransformPluginContext.transform (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64365:7)
+      at async PluginContainer.transform (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49099:18)
+      at async loadAndTransform (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:51977:27)
+      at async viteTransformMiddleware (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:62105:24)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mquests/topic04-09-math-path-adv-var1.json[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mquests/topic04-10-coordinate-math-var1.json[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mquests/topic04-11-fixbug-optimization-var1.json[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mquests/topic04-12-coordinate-math-adv-var1.json[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mquests/topic04-13-dynamic-repeat-var1.json[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x5)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mquests/topic04-19-config-driven-var1.json[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:55 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mquests/topic04-20-fixbug-optimization-var1.json[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:56 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mquests/topic04-21-math-puzzles-var1.json[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:56 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:56 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:56 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../quests/topic10-req03-debug-order-var1.json" from "src/App.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/mac/Downloads/Project-BuildMapWithBlocks/apps/react-quest-app/src/App.tsx[39m:211:41
+[33m  1  |  import * as __vite_glob_0_0 from "../quests/maze-3d-3.json";import * as __vite_glob_0_1 from "../quests/testmap-L-shape.json";import * as __vite_glob_0_2 from "../quests/testmap.json";import * as __vite_glob_0_3 from "../quests/topic10-req03-debug-order-var1.json";import * as __vite_glob_0_4 from "../quests/topic10-req03-debug-order-var2.json";import * as __vite_glob_0_5 from "../quests/topic10-req04-debug-missing-var1.json";import * as __vite_glob_0_6 from "../quests/topic10-req04-debug-missing-var2.json";import { jsxDEV } from "react/jsx-dev-runtime";
+     |                                                                                                                                                                                                                            ^
+  2  |  import * as RefreshRuntime from "/@react-refresh";
+  3  |  const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;[39m
+      at TransformPluginContext._formatError (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49258:41)
+      at TransformPluginContext.error (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49253:16)
+      at normalizeUrl (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64306:23)
+      at async file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64438:39
+      at async Promise.all (index 3)
+      at async TransformPluginContext.transform (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64365:7)
+      at async PluginContainer.transform (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49099:18)
+      at async loadAndTransform (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:51977:27)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:56 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../quests/topic10-req03-debug-order-var1.json" from "src/App.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/mac/Downloads/Project-BuildMapWithBlocks/apps/react-quest-app/src/App.tsx[39m:211:41
+[33m  1  |  import * as __vite_glob_0_0 from "../quests/maze-3d-3.json";import * as __vite_glob_0_1 from "../quests/testmap-L-shape.json";import * as __vite_glob_0_2 from "../quests/testmap.json";import * as __vite_glob_0_3 from "../quests/topic10-req03-debug-order-var1.json";import * as __vite_glob_0_4 from "../quests/topic10-req03-debug-order-var2.json";import * as __vite_glob_0_5 from "../quests/topic10-req04-debug-missing-var1.json";import * as __vite_glob_0_6 from "../quests/topic10-req04-debug-missing-var2.json";import { jsxDEV } from "react/jsx-dev-runtime";
+     |                                                                                                                                                                                                                            ^
+  2  |  import * as RefreshRuntime from "/@react-refresh";
+  3  |  const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;[39m
+      at TransformPluginContext._formatError (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49258:41)
+      at TransformPluginContext.error (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49253:16)
+      at normalizeUrl (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64306:23)
+      at async file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64438:39
+      at async Promise.all (index 3)
+      at async TransformPluginContext.transform (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64365:7)
+      at async PluginContainer.transform (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49099:18)
+      at async loadAndTransform (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:51977:27) [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:56 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../quests/topic10-req03-debug-order-var1.json" from "src/App.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/mac/Downloads/Project-BuildMapWithBlocks/apps/react-quest-app/src/App.tsx[39m:211:41
+[33m  1  |  import * as __vite_glob_0_0 from "../quests/maze-3d-3.json";import * as __vite_glob_0_1 from "../quests/testmap-L-shape.json";import * as __vite_glob_0_2 from "../quests/testmap.json";import * as __vite_glob_0_3 from "../quests/topic10-req03-debug-order-var1.json";import * as __vite_glob_0_4 from "../quests/topic10-req03-debug-order-var2.json";import * as __vite_glob_0_5 from "../quests/topic10-req04-debug-missing-var1.json";import * as __vite_glob_0_6 from "../quests/topic10-req04-debug-missing-var2.json";import { jsxDEV } from "react/jsx-dev-runtime";
+     |                                                                                                                                                                                                                            ^
+  2  |  import * as RefreshRuntime from "/@react-refresh";
+  3  |  const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;[39m
+      at TransformPluginContext._formatError (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49258:41)
+      at TransformPluginContext.error (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49253:16)
+      at normalizeUrl (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64306:23)
+      at async file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64438:39
+      at async Promise.all (index 3)
+      at async TransformPluginContext.transform (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64365:7)
+      at async PluginContainer.transform (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49099:18)
+      at async loadAndTransform (file:///Users/mac/Downloads/Project-BuildMapWithBlocks/node_modules/.pnpm/vite@5.4.20_@types+node@24.7.1/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:51977:27) [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:56 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mquests/topic10-req01-debug-param-var2.json[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:56 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mquests/topic10-req02-debug-param-var1.json[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:56 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mquests/topic10-req02-debug-param-var2.json[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:56 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mquests/topic10-req03-debug-order-var1.json[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:56 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mquests/topic10-req03-debug-order-var2.json[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:56 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mquests/topic10-req04-debug-missing-var1.json[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:56 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:51:57 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mquests/topic10-req01-debug-param-var2.json[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:55:49 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:55:51 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mquests/topic08-req01-wall-follower-var1.json[22m

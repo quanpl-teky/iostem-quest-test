@@ -1,11 +1,13 @@
 
-> @repo/map-builder-app@1.0.0 dev /Users/mac/Downloads/react-quest-monorepo-main 2/apps/map-builder-app
+> @repo/map-builder-app@1.0.0 dev /Users/mac/Downloads/Project-BuildMapWithBlocks/apps/map-builder-app
 > vite
 
+Re-optimizing dependencies because vite config has changed
+Port 5173 is in use, trying another one...
 [36m[vite-plugin-static-copy][39m [32mCollected 1 items.[39m
 
-  [32m[1mVITE[22m v5.4.20[39m  [2mready in [0m[1m1182[22m[2m[0m ms[22m
+  [32m[1mVITE[22m v5.4.20[39m  [2mready in [0m[1m583[22m[2m[0m ms[22m
 
-  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5174[22m/[39m
 [2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
 [2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
