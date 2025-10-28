@@ -1,16 +1,16 @@
 {
-  "id": "topic08-req02-flood-fill-var1",
+  "id": "test_zigzag_01-var1",
   "gameType": "maze",
-  "topic": "topic-title-topic_08_algorithms",
-  "level": 2,
-  "titleKey": "Challenge.topic08-req02-flood-fill.Title",
-  "questTitleKey": "Challenge.topic08-req02-flood-fill.Description",
-  "descriptionKey": "Challenge.topic08-req02-flood-fill.Description",
+  "topic": "topic-title-topic_100",
+  "level": 14,
+  "titleKey": "Challenge.test_zigzag_01.Title",
+  "questTitleKey": "Challenge.test_zigzag_01.Description",
+  "descriptionKey": "Challenge.test_zigzag_01.Description",
   "translations": {
     "vi": {
-      "Challenge.topic08-req02-flood-fill.Title": "Thuật toán Lấp đầy",
-      "Challenge.topic08-req02-flood-fill.Description": "Nhiệm vụ của bạn là thu thập hết tất cả đá quý trên các hòn đảo. Hãy thiết kế một thuật toán để khám phá mọi ngóc ngách.",
-      "topic-title-topic_08_algorithms": "Thuật toán"
+      "Challenge.test_zigzag_01.Title": "Test Ziczac",
+      "Challenge.test_zigzag_01.Description": "Kiểm tra map 'zigzag'.",
+      "topic-title-topic_100": "Kiểm tra các Map còn lại"
     }
   },
   "supportedEditors": [
@@ -43,6 +43,10 @@
             },
             {
               "kind": "block",
+              "type": "maze_jump"
+            },
+            {
+              "kind": "block",
               "type": "maze_turn"
             }
           ]
@@ -55,10 +59,6 @@
             {
               "kind": "block",
               "type": "maze_forever"
-            },
-            {
-              "kind": "block",
-              "type": "controls_whileUntil"
             },
             {
               "kind": "block",
@@ -188,7 +188,7 @@
         }
       ]
     },
-    "maxBlocks": 15,
+    "maxBlocks": 22,
     "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"></statement></block></xml>"
   },
   "gameConfig": {
@@ -198,62 +198,6 @@
       {
         "modelKey": "ground.normal",
         "position": {
-          "x": 1,
-          "y": 0,
-          "z": 7
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 1,
-          "y": 0,
-          "z": 8
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 2,
-          "y": 0,
-          "z": 7
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 2,
-          "y": 0,
-          "z": 8
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 3,
-          "y": 0,
-          "z": 7
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 4,
-          "y": 0,
-          "z": 7
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 5,
-          "y": 0,
-          "z": 7
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
           "x": 6,
           "y": 0,
           "z": 7
@@ -270,9 +214,9 @@
       {
         "modelKey": "ground.normal",
         "position": {
-          "x": 7,
+          "x": 6,
           "y": 0,
-          "z": 7
+          "z": 9
         }
       },
       {
@@ -280,7 +224,7 @@
         "position": {
           "x": 7,
           "y": 0,
-          "z": 8
+          "z": 9
         }
       },
       {
@@ -288,7 +232,23 @@
         "position": {
           "x": 8,
           "y": 0,
-          "z": 7
+          "z": 9
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 8,
+          "y": 0,
+          "z": 10
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 8,
+          "y": 0,
+          "z": 11
         }
       },
       {
@@ -296,7 +256,7 @@
         "position": {
           "x": 9,
           "y": 0,
-          "z": 7
+          "z": 11
         }
       },
       {
@@ -304,39 +264,23 @@
         "position": {
           "x": 10,
           "y": 0,
-          "z": 7
+          "z": 11
         }
       },
       {
         "modelKey": "ground.normal",
         "position": {
-          "x": 11,
+          "x": 10,
           "y": 0,
-          "z": 7
+          "z": 12
         }
       },
       {
         "modelKey": "ground.normal",
         "position": {
-          "x": 11,
+          "x": 10,
           "y": 0,
-          "z": 8
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 12,
-          "y": 0,
-          "z": 7
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 12,
-          "y": 0,
-          "z": 8
+          "z": 13
         }
       }
     ],
@@ -344,51 +288,80 @@
       {
         "id": "player1",
         "start": {
-          "x": 1,
+          "x": 6,
           "y": 1,
           "z": 7,
           "direction": 1
         }
       }
     ],
-    "collectibles": [],
+    "collectibles": [
+      {
+        "id": "c1",
+        "type": "crystal",
+        "position": {
+          "x": 8,
+          "y": 1,
+          "z": 9
+        }
+      }
+    ],
     "interactibles": [],
     "finish": {
-      "x": 11,
+      "x": 10,
       "y": 1,
-      "z": 8
+      "z": 13
     }
   },
   "solution": {
     "type": "reach_target",
     "itemGoals": {
-      "crystal": 0
+      "crystal": 1
     },
-    "optimalBlocks": 10,
-    "optimalLines": 9,
+    "optimalBlocks": 17,
+    "optimalLines": 16,
     "rawActions": [
+      "turnRight",
       "moveForward",
       "moveForward",
+      "turnLeft",
       "moveForward",
       "moveForward",
+      "collect",
+      "turnRight",
       "moveForward",
       "moveForward",
-      "moveForward",
-      "moveForward",
+      "turnLeft",
       "moveForward",
       "moveForward",
       "turnRight",
+      "moveForward",
       "moveForward"
     ],
     "structuredSolution": {
       "main": [
         {
-          "type": "CALL",
-          "name": "PROCEDURE_1"
+          "type": "maze_turn",
+          "direction": "turnRight"
         },
         {
-          "type": "CALL",
-          "name": "PROCEDURE_1"
+          "type": "moveForward"
+        },
+        {
+          "type": "moveForward"
+        },
+        {
+          "type": "maze_turn",
+          "direction": "turnLeft"
+        },
+        {
+          "type": "moveForward"
+        },
+        {
+          "type": "moveForward"
+        },
+        {
+          "type": "collect"
         },
         {
           "type": "maze_turn",
@@ -396,27 +369,32 @@
         },
         {
           "type": "moveForward"
+        },
+        {
+          "type": "moveForward"
+        },
+        {
+          "type": "maze_turn",
+          "direction": "turnLeft"
+        },
+        {
+          "type": "moveForward"
+        },
+        {
+          "type": "moveForward"
+        },
+        {
+          "type": "maze_turn",
+          "direction": "turnRight"
+        },
+        {
+          "type": "moveForward"
+        },
+        {
+          "type": "moveForward"
         }
       ],
-      "procedures": {
-        "PROCEDURE_1": [
-          {
-            "type": "maze_repeat",
-            "times": 2,
-            "body": [
-              {
-                "type": "moveForward"
-              },
-              {
-                "type": "moveForward"
-              }
-            ]
-          },
-          {
-            "type": "moveForward"
-          }
-        ]
-      }
+      "procedures": {}
     }
   },
   "sounds": {

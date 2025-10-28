@@ -1,16 +1,16 @@
 {
-  "id": "topic08-req02-flood-fill-var1",
+  "id": "test_spiral_path_01-var1",
   "gameType": "maze",
-  "topic": "topic-title-topic_08_algorithms",
-  "level": 2,
-  "titleKey": "Challenge.topic08-req02-flood-fill.Title",
-  "questTitleKey": "Challenge.topic08-req02-flood-fill.Description",
-  "descriptionKey": "Challenge.topic08-req02-flood-fill.Description",
+  "topic": "topic-title-topic_100",
+  "level": 8,
+  "titleKey": "Challenge.test_spiral_path_01.Title",
+  "questTitleKey": "Challenge.test_spiral_path_01.Description",
+  "descriptionKey": "Challenge.test_spiral_path_01.Description",
   "translations": {
     "vi": {
-      "Challenge.topic08-req02-flood-fill.Title": "Thuật toán Lấp đầy",
-      "Challenge.topic08-req02-flood-fill.Description": "Nhiệm vụ của bạn là thu thập hết tất cả đá quý trên các hòn đảo. Hãy thiết kế một thuật toán để khám phá mọi ngóc ngách.",
-      "topic-title-topic_08_algorithms": "Thuật toán"
+      "Challenge.test_spiral_path_01.Title": "Test Xoắn ốc 2D",
+      "Challenge.test_spiral_path_01.Description": "Kiểm tra map 'spiral_path' 2D.",
+      "topic-title-topic_100": "Kiểm tra các Map còn lại"
     }
   },
   "supportedEditors": [
@@ -43,6 +43,10 @@
             },
             {
               "kind": "block",
+              "type": "maze_jump"
+            },
+            {
+              "kind": "block",
               "type": "maze_turn"
             }
           ]
@@ -55,10 +59,6 @@
             {
               "kind": "block",
               "type": "maze_forever"
-            },
-            {
-              "kind": "block",
-              "type": "controls_whileUntil"
             },
             {
               "kind": "block",
@@ -188,7 +188,7 @@
         }
       ]
     },
-    "maxBlocks": 15,
+    "maxBlocks": 24,
     "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"></statement></block></xml>"
   },
   "gameConfig": {
@@ -198,57 +198,9 @@
       {
         "modelKey": "ground.normal",
         "position": {
-          "x": 1,
-          "y": 0,
-          "z": 7
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 1,
-          "y": 0,
-          "z": 8
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 2,
-          "y": 0,
-          "z": 7
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 2,
-          "y": 0,
-          "z": 8
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 3,
-          "y": 0,
-          "z": 7
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 4,
-          "y": 0,
-          "z": 7
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
           "x": 5,
           "y": 0,
-          "z": 7
+          "z": 5
         }
       },
       {
@@ -256,15 +208,15 @@
         "position": {
           "x": 6,
           "y": 0,
-          "z": 7
+          "z": 5
         }
       },
       {
         "modelKey": "ground.normal",
         "position": {
-          "x": 6,
+          "x": 7,
           "y": 0,
-          "z": 8
+          "z": 5
         }
       },
       {
@@ -281,6 +233,22 @@
           "x": 7,
           "y": 0,
           "z": 8
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 7,
+          "y": 0,
+          "z": 9
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 8,
+          "y": 0,
+          "z": 5
         }
       },
       {
@@ -294,9 +262,41 @@
       {
         "modelKey": "ground.normal",
         "position": {
+          "x": 8,
+          "y": 0,
+          "z": 9
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
           "x": 9,
           "y": 0,
-          "z": 7
+          "z": 5
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 9,
+          "y": 0,
+          "z": 9
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 10,
+          "y": 0,
+          "z": 5
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 10,
+          "y": 0,
+          "z": 6
         }
       },
       {
@@ -310,15 +310,7 @@
       {
         "modelKey": "ground.normal",
         "position": {
-          "x": 11,
-          "y": 0,
-          "z": 7
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 11,
+          "x": 10,
           "y": 0,
           "z": 8
         }
@@ -326,17 +318,9 @@
       {
         "modelKey": "ground.normal",
         "position": {
-          "x": 12,
+          "x": 10,
           "y": 0,
-          "z": 7
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 12,
-          "y": 0,
-          "z": 8
+          "z": 9
         }
       }
     ],
@@ -344,51 +328,147 @@
       {
         "id": "player1",
         "start": {
-          "x": 1,
+          "x": 5,
           "y": 1,
-          "z": 7,
+          "z": 5,
           "direction": 1
         }
       }
     ],
-    "collectibles": [],
+    "collectibles": [
+      {
+        "id": "c1",
+        "type": "crystal",
+        "position": {
+          "x": 8,
+          "y": 1,
+          "z": 9
+        }
+      },
+      {
+        "id": "c2",
+        "type": "crystal",
+        "position": {
+          "x": 9,
+          "y": 1,
+          "z": 9
+        }
+      },
+      {
+        "id": "c3",
+        "type": "crystal",
+        "position": {
+          "x": 10,
+          "y": 1,
+          "z": 7
+        }
+      },
+      {
+        "id": "c4",
+        "type": "crystal",
+        "position": {
+          "x": 7,
+          "y": 1,
+          "z": 7
+        }
+      },
+      {
+        "id": "c5",
+        "type": "crystal",
+        "position": {
+          "x": 7,
+          "y": 1,
+          "z": 8
+        }
+      }
+    ],
     "interactibles": [],
     "finish": {
-      "x": 11,
+      "x": 8,
       "y": 1,
-      "z": 8
+      "z": 7
     }
   },
   "solution": {
     "type": "reach_target",
     "itemGoals": {
-      "crystal": 0
+      "crystal": 5
     },
-    "optimalBlocks": 10,
-    "optimalLines": 9,
+    "optimalBlocks": 19,
+    "optimalLines": 18,
     "rawActions": [
       "moveForward",
       "moveForward",
       "moveForward",
       "moveForward",
       "moveForward",
+      "turnRight",
       "moveForward",
       "moveForward",
+      "collect",
       "moveForward",
       "moveForward",
+      "turnRight",
       "moveForward",
+      "collect",
+      "moveForward",
+      "collect",
+      "moveForward",
+      "turnRight",
+      "moveForward",
+      "collect",
+      "moveForward",
+      "collect",
       "turnRight",
       "moveForward"
     ],
     "structuredSolution": {
       "main": [
         {
-          "type": "CALL",
-          "name": "PROCEDURE_1"
+          "type": "maze_repeat",
+          "times": 2,
+          "body": [
+            {
+              "type": "moveForward"
+            },
+            {
+              "type": "moveForward"
+            }
+          ]
+        },
+        {
+          "type": "moveForward"
+        },
+        {
+          "type": "maze_turn",
+          "direction": "turnRight"
+        },
+        {
+          "type": "moveForward"
         },
         {
           "type": "CALL",
           "name": "PROCEDURE_1"
+        },
+        {
+          "type": "maze_repeat",
+          "times": 2,
+          "body": [
+            {
+              "type": "moveForward"
+            },
+            {
+              "type": "maze_turn",
+              "direction": "turnRight"
+            },
+            {
+              "type": "CALL",
+              "name": "PROCEDURE_1"
+            },
+            {
+              "type": "collect"
+            }
+          ]
         },
         {
           "type": "maze_turn",
@@ -401,16 +481,10 @@
       "procedures": {
         "PROCEDURE_1": [
           {
-            "type": "maze_repeat",
-            "times": 2,
-            "body": [
-              {
-                "type": "moveForward"
-              },
-              {
-                "type": "moveForward"
-              }
-            ]
+            "type": "moveForward"
+          },
+          {
+            "type": "collect"
           },
           {
             "type": "moveForward"

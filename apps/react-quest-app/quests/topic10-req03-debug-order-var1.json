@@ -69,7 +69,7 @@
       ]
     },
     "maxBlocks": 12,
-    "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"><block type=\"maze_moveForward\"><next><block type=\"maze_collect\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\" /></next></block></next></block></next></block></next></block></next></block></statement></block></xml>"
+    "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"><block type=\"maze_collect\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\" /></next></block></next></block></next></block></next></block></next></block></statement></block></xml>"
   },
   "gameConfig": {
     "type": "maze",
@@ -78,25 +78,9 @@
       {
         "modelKey": "ground.normal",
         "position": {
-          "x": 6,
-          "y": 0,
-          "z": 8
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 7,
-          "y": 0,
-          "z": 8
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
           "x": 8,
           "y": 0,
-          "z": 8
+          "z": 7
         }
       },
       {
@@ -104,7 +88,7 @@
         "position": {
           "x": 9,
           "y": 0,
-          "z": 8
+          "z": 7
         }
       },
       {
@@ -112,7 +96,7 @@
         "position": {
           "x": 10,
           "y": 0,
-          "z": 8
+          "z": 7
         }
       },
       {
@@ -120,7 +104,23 @@
         "position": {
           "x": 11,
           "y": 0,
-          "z": 8
+          "z": 7
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 12,
+          "y": 0,
+          "z": 7
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 13,
+          "y": 0,
+          "z": 7
         }
       }
     ],
@@ -128,9 +128,9 @@
       {
         "id": "player1",
         "start": {
-          "x": 6,
+          "x": 8,
           "y": 1,
-          "z": 8,
+          "z": 7,
           "direction": 1
         }
       }
@@ -140,17 +140,17 @@
         "id": "c1",
         "type": "crystal",
         "position": {
-          "x": 7,
+          "x": 10,
           "y": 1,
-          "z": 8
+          "z": 7
         }
       }
     ],
     "interactibles": [],
     "finish": {
-      "x": 11,
+      "x": 13,
       "y": 1,
-      "z": 8
+      "z": 7
     }
   },
   "solution": {
@@ -162,8 +162,8 @@
     "optimalLines": 6,
     "rawActions": [
       "moveForward",
-      "collect",
       "moveForward",
+      "collect",
       "moveForward",
       "moveForward",
       "moveForward"
@@ -174,10 +174,10 @@
           "type": "moveForward"
         },
         {
-          "type": "collect"
+          "type": "moveForward"
         },
         {
-          "type": "moveForward"
+          "type": "collect"
         },
         {
           "type": "moveForward"
@@ -194,10 +194,10 @@
     "structuredSolution_fixbug_version": {
       "main": [
         {
-          "type": "moveForward"
+          "type": "collect"
         },
         {
-          "type": "collect"
+          "type": "moveForward"
         },
         {
           "type": "moveForward"

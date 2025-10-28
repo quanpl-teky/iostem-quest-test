@@ -293,14 +293,14 @@ export class MazeEngine implements IMazeEngine {
     let targetY: number | null = null;
 
     // Ưu tiên 1: Kiểm tra xem có thể nhảy lên 1 khối không
-    const obstacleModel = this._getBlockModelAt(nextX, player.y, nextZ);
+    const obstacleModel = this._getBlockModelAt(nextX, player.y, nextZ) || '';
     // [ĐÃ SỬA] Logic kiểm tra nhảy lên: Chỉ cần kiểm tra ô phía trên vật cản có trống không.
     const modelAtLandingSpot = this._getBlockModelAt(nextX, player.y + 1, nextZ);
-
-    if (obstacleModel === 'wall.brick01' && modelAtLandingSpot === null) {
+    const isJumpableObstacle = obstacleModel === 'wall.brick01' || obstacleModel === 'ground.normal';
+    if (isJumpableObstacle && modelAtLandingSpot === null) {
       // Có thể nhảy lên
       targetY = player.y + 1;
-    } 
+    }
     // Ưu tiên 2: Nếu không nhảy lên được, kiểm tra xem có thể nhảy bằng không
     else if (this._isWalkable(nextX, player.y, nextZ)) {
       // Có thể nhảy bằng (giữ nguyên độ cao)
@@ -343,8 +343,9 @@ export class MazeEngine implements IMazeEngine {
     }
 
     // Kiểm tra có thể nhảy qua 'wall.brick01' để đi lên
-    const obstacleModel = this._getBlockModelAt(nextX, player.y, nextZ);
-    const canJumpUp = obstacleModel === 'wall.brick01' && this._isWalkable(nextX, player.y + 1, nextZ);
+    const obstacleModel = this._getBlockModelAt(nextX, player.y, nextZ) || '';
+    const isJumpableObstacle = obstacleModel === 'wall.brick01' || obstacleModel === 'ground.normal';
+    const canJumpUp = isJumpableObstacle && this._isWalkable(nextX, player.y + 1, nextZ);
     return canJumpUp;
   }
 
