@@ -364,7 +364,7 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
       topBlocks.forEach(block => {
         if (block.type !== START_BLOCK_TYPE && !block.type.startsWith('procedures_def')) {
           blocksToDisable.push(block);
-          (block as Blockly.BlockSvg).setEnabled(false);
+          block.setEnabled(false);
         }
       });
 
@@ -373,7 +373,7 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
 
       // Kích hoạt lại các khối ngay lập tức để người dùng không thấy sự thay đổi.
       blocksToDisable.forEach(block => {
-        (block as Blockly.BlockSvg).setEnabled(true);
+        block.setEnabled(true);
       });
     }
     
