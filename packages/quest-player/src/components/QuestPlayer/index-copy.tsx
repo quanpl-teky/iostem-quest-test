@@ -106,7 +106,20 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
   const { GameRenderer, engineRef, solutionCommands, error: questLoaderError, isQuestReady } = useQuestLoader(questData);
   const { currentEditor, aceCode, setAceCode, handleEditorChange } = useEditorManager(questData, workspaceRef);
 
-  const [currentUserCode, setCurrentUserCode] = useState('');
+  // Tách riêng code cho blockly và monaco để quản lý tốt hơn
+  const [blocklyGeneratedCode, setBlocklyGeneratedCode] = useState('');
+
+  // currentUserCode sẽ là code được dùng để chạy game
+  const currentUserCode = useMemo(() => {
+    if (currentEditor === 'monaco') {
+      return aceCode;
+    }
+    return blocklyGeneratedCode;
+  }, [currentEditor, aceCode, blocklyGeneratedCode]);
+
+  const customHandleEditorChange = (newEditor: 'blockly' | 'monaco') => {
+    handleEditorChange(newEditor);
+  };
 
   const settings = useMemo(() => ({ ...DEFAULT_SETTINGS, ...props.initialSettings }), [props.initialSettings]);
 
@@ -211,6 +224,16 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
     }
   }, [isQuestReady, engineRef, resetGame]);
 
+  // [SỬA LỖI] Reset stats khi chuyển editor để đảm bảo tính toán lại chính xác
+  useEffect(() => {
+    setDisplayStats({});
+  }, [currentEditor]);
+
+  // [SỬA LỖI] Reset stats khi chuyển editor để đảm bảo tính toán lại chính xác
+  useEffect(() => {
+    setDisplayStats({});
+  }, [currentEditor]);
+
   useEffect(() => {
     const newStats: DisplayStats = {};
     if (questData) {
@@ -260,7 +283,7 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
         if (isStandalone) setDialogState({ isOpen: true, title: 'Missing Start Block', message: t('Blockly.MissingStartBlock') });
         return;
       }
-      codeToRun = currentUserCode;
+      codeToRun = blocklyGeneratedCode;
     }
     runGame(codeToRun, mode);
   };
@@ -271,89 +294,74 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
     setImportError('');
   };
 
+  const lastGeneratedCode = useRef('');
+
   const onWorkspaceChange = useCallback((workspace: Blockly.WorkspaceSvg) => {
     workspaceRef.current = workspace;
     setBlockCount(workspace.getAllBlocks(false).length);
   
-    let finalCode = '';
-    
     javascriptGenerator.init(workspace);
     
     const startBlock = workspace.getTopBlocks(true).find(b => b.type === START_BLOCK_TYPE);
   
+    let newCode = '';
     if (startBlock) {
-      // Step 1: Generate full workspace code
-      const fullWorkspaceCode = javascriptGenerator.workspaceToCode(workspace);
+      // Lấy tất cả các khối thủ tục (hàm)
+      const procedureBlocks = workspace.getTopBlocks(false).filter(
+        b => b.type === 'procedures_defreturn' || b.type === 'procedures_defnoreturn'
+      );
       
-      // Step 2: Extract ONLY function definitions by counting braces
-      const lines = fullWorkspaceCode.split('\n');
-      const functionDefinitions: string[] = [];
-      let currentFunction: string[] = [];
-      let braceCount = 0;
-      let inFunction = false;
+      // Tạo code cho các hàm trước
+      const functionsCode = procedureBlocks
+        .map(procBlock => javascriptGenerator.blockToCode(procBlock))
+        .join('\n\n');
       
-      for (const line of lines) {
-        // Detect function start
-        if (line.trim().startsWith('function ')) {
-          inFunction = true;
-          braceCount = 0;
-          currentFunction = [];
-        }
-        
-        if (inFunction) {
-          currentFunction.push(line);
-          
-          // Count braces in this line
-          const openBraces = (line.match(/{/g) || []).length;
-          const closeBraces = (line.match(/}/g) || []).length;
-          braceCount += openBraces - closeBraces;
-          
-          // When brace count returns to 0, function is complete
-          if (braceCount === 0 && currentFunction.length > 1) {
-            functionDefinitions.push(...currentFunction);
-            functionDefinitions.push(''); // Add blank line after function
-            currentFunction = [];
-            inFunction = false;
-          }
-        }
-      }
-      
-      // Step 3: Generate code ONLY for startBlock
-      javascriptGenerator.init(workspace);
+      // Tạo code cho khối bắt đầu
       const startCode = javascriptGenerator.blockToCode(startBlock);
-      const startCodeStr = Array.isArray(startCode) ? startCode[0] : (startCode || '');
+      // Đảm bảo startCode là chuỗi và chỉ lấy phần code thực thi, bỏ qua phần khai báo hàm (nếu có)
+      const startCodeStr = Array.isArray(startCode) ? startCode[0] : String(startCode || '');
       
-      // Step 4: Combine
-      finalCode = functionDefinitions.join('\n') + '\n' + startCodeStr;
+      // Kết hợp code của hàm và code chính
+      newCode = functionsCode + (functionsCode ? '\n\n' : '') + startCodeStr;
     }
     
-    console.log('Generated code:', finalCode);
-    setCurrentUserCode(finalCode);
-  }, []);
+    // Chỉ cập nhật state nếu code thực sự thay đổi
+    if (newCode !== lastGeneratedCode.current) {
+      console.log('Generated code changed, updating state.');
+      lastGeneratedCode.current = newCode;
+      setBlocklyGeneratedCode(newCode);
+    }
+  }, [setBlocklyGeneratedCode]); // Phụ thuộc không thay đổi
 
   const onInject = useCallback((workspace: Blockly.WorkspaceSvg) => {
     workspaceRef.current = workspace;
+
+    // Chỉ thực hiện logic fallback nếu startBlocks không được cung cấp trong JSON
+    if (!questData?.blocklyConfig?.startBlocks) {
+      const existingStartBlock = workspace.getTopBlocks(false).find(b => b.type === START_BLOCK_TYPE);
+      if (!existingStartBlock) {
+        // Create a new start block if none exists
+        const startBlock = workspace.newBlock(START_BLOCK_TYPE);
+        startBlock.initSvg();
+        startBlock.render();
+        startBlock.moveBy(50, 50); // Position it in the workspace
+        startBlock.setDeletable(false);
+      }
+      return; // Kết thúc sớm
+    }
+
+    // Logic cũ để dọn dẹp nếu có nhiều start block (hữu ích cho các file JSON bị lỗi)
     const startBlocks = workspace.getTopBlocks(false).filter(b => b.type === START_BLOCK_TYPE);
-    
     if (startBlocks.length > 1) {
-      // Dispose of extra start blocks to ensure only one
       for (let i = 1; i < startBlocks.length; i++) {
         startBlocks[i].dispose();
       }
     }
-    
-    let startBlock = startBlocks[0];
-    if (!startBlock) {
-      // Create a new start block if none exists
-      startBlock = workspace.newBlock(START_BLOCK_TYPE);
-      startBlock.initSvg();
-      startBlock.render();
-      startBlock.moveBy(50, 50); // Position it in the workspace
+    // Đảm bảo khối start chính không thể bị xóa
+    if (startBlocks[0]) {
+      startBlocks[0].setDeletable(false);
     }
-    
-    // Make the start block undeletable as per best practice
-    startBlock.setDeletable(false);
-  }, []);
+  }, [questData]);
 
   const is3DRenderer = questData?.gameConfig.type === 'maze' && questData.gameConfig.renderer === '3d';
 
@@ -366,6 +374,13 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
 
   const blocklyTheme = useMemo(() => createBlocklyTheme(settings.blocklyThemeName, effectiveColorScheme), [settings.blocklyThemeName, effectiveColorScheme]);
 
+  // Sử dụng useRef để đảm bảo hàm callback resize là ổn định
+  const handleBlocklyPanelResize = useRef(() => {
+    setTimeout(() => {
+      if (workspaceRef.current) Blockly.svgResize(workspaceRef.current);
+    }, 0);
+  }).current;
+
   const workspaceConfiguration = useMemo(() => ({
     theme: blocklyTheme,
     renderer: settings.renderer,
@@ -374,12 +389,6 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
     grid: { spacing: 20, length: 3, colour: "#ccc", snap: settings.gridEnabled },
     sounds: settings.soundsEnabled,
   }), [blocklyTheme, settings]);
-
-  const handleBlocklyPanelResize = useCallback(() => {
-    setTimeout(() => {
-      if (workspaceRef.current) Blockly.svgResize(workspaceRef.current);
-    }, 0);
-  }, []);
 
   if (!questData && isStandalone) {
     return (
@@ -484,7 +493,7 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
             <EditorToolbar
               supportedEditors={questData.supportedEditors || ['blockly']}
               currentEditor={currentEditor}
-              onEditorChange={handleEditorChange}
+              onEditorChange={customHandleEditorChange}
               onHelpClick={() => setIsDocsOpen(true)}
               onToggleSettings={() => setIsSettingsOpen(!isSettingsOpen)}
             />
@@ -496,7 +505,6 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
                   onChange={(value) => {
                     const code = value || '';
                     setAceCode(code);
-                    setCurrentUserCode(code);
                   }}
                 />
               ) : (
