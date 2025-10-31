@@ -91,6 +91,7 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
 
   const [highlightedBlockId, setHighlightedBlockId] = useState<string | null>(null);
   const [dynamicToolboxConfig, setDynamicToolboxConfig] = useState<ToolboxJSON | null>(null);
+  const [initialXml, setInitialXml] = useState<string | undefined>(undefined);
   
   const [blocklyWorkspaceKey, setBlocklyWorkspaceKey] = useState<string>('initial-key');
   const [isBlocksInitialized, setIsBlocksInitialized] = useState(false);
@@ -106,7 +107,16 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
   const { GameRenderer, engineRef, solutionCommands, error: questLoaderError, isQuestReady } = useQuestLoader(questData);
   const { currentEditor, aceCode, setAceCode, handleEditorChange } = useEditorManager(questData, workspaceRef);
 
-  const [currentUserCode, setCurrentUserCode] = useState('');
+  // Tách riêng code cho blockly và monaco để quản lý tốt hơn
+  const [blocklyGeneratedCode, setBlocklyGeneratedCode] = useState('');
+
+  // currentUserCode sẽ là code được dùng để chạy game
+  const currentUserCode = useMemo(() => {
+    if (currentEditor === 'monaco') {
+      return aceCode;
+    }
+    return blocklyGeneratedCode;
+  }, [currentEditor, aceCode, blocklyGeneratedCode]);
 
   const settings = useMemo(() => ({ ...DEFAULT_SETTINGS, ...props.initialSettings }), [props.initialSettings]);
 
@@ -196,12 +206,52 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
       });
       initialToolboxConfigRef.current = newToolbox;
       setDynamicToolboxConfig(newToolbox);
+
+      // [MỚI] Xử lý startBlocks shorthand
+      const startBlocksValue = questData.blocklyConfig.startBlocks;
+      if (typeof startBlocksValue === 'string' && !startBlocksValue.trim().startsWith('<')) {
+        // Đây là chuỗi shorthand, cần phân tích
+        setInitialXml(parseShorthandToXml(startBlocksValue));
+      } else {
+        // Đây là XML thông thường hoặc không có
+        setInitialXml(startBlocksValue);
+      }
+
       setLoadedQuestId(questData.id);
     } else {
       setDynamicToolboxConfig(null);
+      setInitialXml(undefined);
       setLoadedQuestId(null);
     }
   }, [questData, t, language]);
+
+  // [MỚI] Hàm phân tích chuỗi shorthand thành XML
+  const parseShorthandToXml = (shorthand: string): string => {
+    // Regex để tìm các cặp (số)(hành động) hoặc chỉ (hành động)
+    const regex = /(\d+)?(turnRight|turnLeft|moveForward|collect|jump)/g;
+    let match;
+    const blocksXml: string[] = [];
+  
+    while ((match = regex.exec(shorthand)) !== null) {
+      const count = match[1] ? parseInt(match[1], 10) : 1;
+      const action = match[2];
+  
+      if (count > 1) {
+        // Nếu số lượng > 1, tạo khối lặp
+        blocksXml.push(`<block type="maze_repeat"><value name="TIMES"><shadow type="math_number"><field name="NUM">${count}</field></shadow></value><statement name="DO"><block type="maze_${action}"></block></statement></block>`);
+      } else {
+        // Nếu số lượng là 1, tạo khối hành động đơn
+        if (action === 'turnRight' || action === 'turnLeft') {
+          blocksXml.push(`<block type="maze_turn"><field name="DIR">${action}</field></block>`);
+        } else {
+          blocksXml.push(`<block type="maze_${action}"></block>`);
+        }
+      }
+    }
+    
+    const innerXml = blocksXml.join('<next>') + '</next>'.repeat(blocksXml.length > 1 ? blocksXml.length - 1 : 0);
+    return `<xml><block type="maze_start" deletable="false" movable="false"><statement name="DO">${innerXml}</statement></block></xml>`;
+  };
 
   useEffect(() => { if (questLoaderError) setImportError(questLoaderError); }, [questLoaderError]);
 
@@ -210,6 +260,11 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
       resetGame();
     }
   }, [isQuestReady, engineRef, resetGame]);
+
+  // [SỬA LỖI] Reset stats khi chuyển editor để đảm bảo tính toán lại chính xác
+  useEffect(() => {
+    setDisplayStats({});
+  }, [currentEditor]);
 
   useEffect(() => {
     const newStats: DisplayStats = {};
@@ -260,7 +315,7 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
         if (isStandalone) setDialogState({ isOpen: true, title: 'Missing Start Block', message: t('Blockly.MissingStartBlock') });
         return;
       }
-      codeToRun = currentUserCode;
+      codeToRun = blocklyGeneratedCode;
     }
     runGame(codeToRun, mode);
   };
@@ -299,84 +354,66 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
     setBlockCount(workspace.getAllBlocks(false).length);
   
     let finalCode = '';
-    
-    javascriptGenerator.init(workspace);
-    
-    const startBlock = workspace.getTopBlocks(true).find(b => b.type === START_BLOCK_TYPE);
+    const topBlocks = workspace.getTopBlocks(true);
+    const startBlock = topBlocks.find(b => b.type === START_BLOCK_TYPE);
   
     if (startBlock) {
-      // Step 1: Generate full workspace code
-      const fullWorkspaceCode = javascriptGenerator.workspaceToCode(workspace);
-      
-      // Step 2: Extract ONLY function definitions by counting braces
-      const lines = fullWorkspaceCode.split('\n');
-      const functionDefinitions: string[] = [];
-      let currentFunction: string[] = [];
-      let braceCount = 0;
-      let inFunction = false;
-      
-      for (const line of lines) {
-        // Detect function start
-        if (line.trim().startsWith('function ')) {
-          inFunction = true;
-          braceCount = 0;
-          currentFunction = [];
+      // [SỬA LỖI] Chỉ tạo mã cho khối 'start' và các khối 'procedure'.
+      // Vô hiệu hóa tạm thời các khối khác để workspaceToCode bỏ qua chúng.
+      const blocksToDisable: Blockly.Block[] = [];
+      topBlocks.forEach(block => {
+        if (block.type !== START_BLOCK_TYPE && !block.type.startsWith('procedures_def')) {
+          blocksToDisable.push(block);
+          block.setDisabledReason(true, 'EXECUTING');
         }
-        
-        if (inFunction) {
-          currentFunction.push(line);
-          
-          // Count braces in this line
-          const openBraces = (line.match(/{/g) || []).length;
-          const closeBraces = (line.match(/}/g) || []).length;
-          braceCount += openBraces - closeBraces;
-          
-          // When brace count returns to 0, function is complete
-          if (braceCount === 0 && currentFunction.length > 1) {
-            functionDefinitions.push(...currentFunction);
-            functionDefinitions.push(''); // Add blank line after function
-            currentFunction = [];
-            inFunction = false;
-          }
-        }
-      }
-      
-      // Step 3: Generate code ONLY for startBlock
-      javascriptGenerator.init(workspace);
-      const startCode = javascriptGenerator.blockToCode(startBlock);
-      const startCodeStr = Array.isArray(startCode) ? startCode[0] : (startCode || '');
-      
-      // Step 4: Combine
-      finalCode = functionDefinitions.join('\n') + '\n' + startCodeStr;
+      });
+
+      // Tạo mã - bây giờ nó sẽ bỏ qua các khối đã bị vô hiệu hóa.
+      finalCode = javascriptGenerator.workspaceToCode(workspace);
+
+      // Kích hoạt lại các khối ngay lập tức để người dùng không thấy sự thay đổi.
+      blocksToDisable.forEach(block => {
+        block.setDisabledReason(false, 'EXECUTING');
+      });
     }
     
-    console.log('Generated code:', finalCode);
-    setCurrentUserCode(finalCode);
-  }, []);
+    // Chỉ cập nhật state nếu code thực sự thay đổi
+    if (finalCode !== lastGeneratedCode.current) {
+      console.log('Generated code changed, updating state.');
+      lastGeneratedCode.current = finalCode;
+      setBlocklyGeneratedCode(finalCode);
+    }
+  }, [setBlocklyGeneratedCode]);
 
   const onInject = useCallback((workspace: Blockly.WorkspaceSvg) => {
     workspaceRef.current = workspace;
-    const startBlocks = workspace.getTopBlocks(false).filter(b => b.type === START_BLOCK_TYPE);
+
+    // [SỬA] Sử dụng `initialXml` đã được xử lý thay vì `questData.blocklyConfig.startBlocks`
+    if (!initialXml) {
+      const existingStartBlock = workspace.getTopBlocks(false).find(b => b.type === START_BLOCK_TYPE);
+      if (!existingStartBlock) {
+        // Create a new start block if none exists
+        const startBlock = workspace.newBlock(START_BLOCK_TYPE);
+        startBlock.initSvg();
+        startBlock.render();
+        startBlock.moveBy(50, 50); // Position it in the workspace
+        startBlock.setDeletable(false);
+      }
+      return;
+    }
     
+    // Logic cũ để dọn dẹp nếu có nhiều start block (hữu ích cho các file JSON bị lỗi)
+    const startBlocks = workspace.getTopBlocks(false).filter(b => b.type === START_BLOCK_TYPE);
     if (startBlocks.length > 1) {
-      // Dispose of extra start blocks to ensure only one
       for (let i = 1; i < startBlocks.length; i++) {
         startBlocks[i].dispose();
       }
     }
-    
-    let startBlock = startBlocks[0];
-    if (!startBlock) {
-      // Create a new start block if none exists
-      startBlock = workspace.newBlock(START_BLOCK_TYPE);
-      startBlock.initSvg();
-      startBlock.render();
-      startBlock.moveBy(50, 50); // Position it in the workspace
+    // Đảm bảo khối start chính không thể bị xóa
+    if (startBlocks[0]) {
+      startBlocks[0].setDeletable(false);
     }
-    
-    // Make the start block undeletable as per best practice
-    startBlock.setDeletable(false);
-  }, []);
+  }, [initialXml]);
 
   const is3DRenderer = questData?.gameConfig.type === 'maze' && questData.gameConfig.renderer === '3d';
 
@@ -519,7 +556,6 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
                   onChange={(value) => {
                     const code = value || '';
                     setAceCode(code);
-                    setCurrentUserCode(code);
                   }}
                 />
               ) : (
@@ -529,7 +565,7 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
                       key={blocklyWorkspaceKey}
                       className="fill-container"
                       toolboxConfiguration={dynamicToolboxConfig}
-                      initialXml={questData.blocklyConfig.startBlocks}
+                      initialXml={initialXml}
                       workspaceConfiguration={workspaceConfiguration}
                       onWorkspaceChange={onWorkspaceChange}
                       onInject={onInject}
