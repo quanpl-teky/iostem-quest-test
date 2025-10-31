@@ -271,6 +271,29 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
     setImportError('');
   };
 
+  // [MỚI] Hàm để chuẩn hóa tên hàm/biến tiếng Việt cho JavaScript
+  const sanitizeVietnameseName = (name: string) => {
+    let sanitized = name.normalize('NFD').replace(/[\u0300-\u036f]/g, ''); // Bỏ dấu
+    sanitized = sanitized.replace(/đ/g, 'd').replace(/Đ/g, 'D'); // Chuyển 'đ' thành 'd'
+    sanitized = sanitized.replace(/\s+/g, '_'); // Thay khoảng trắng bằng gạch dưới
+    sanitized = sanitized.replace(/[^a-zA-Z0-9_]/g, ''); // Loại bỏ các ký tự không hợp lệ
+    return sanitized || 'unnamed_function'; // Trả về tên mặc định nếu kết quả rỗng
+  };
+
+  // [MỚI] Ghi đè phương thức của Blockly để xử lý tên tiếng Việt
+  useEffect(() => {
+    const originalGetDistinctName = javascriptGenerator.nameDB_?.getDistinctName;
+    if (originalGetDistinctName) {
+      javascriptGenerator.nameDB_!.getDistinctName = (name, type) => {
+        const sanitizedName = sanitizeVietnameseName(name);
+        return originalGetDistinctName.call(javascriptGenerator.nameDB_, sanitizedName, type);
+      };
+    }
+    return () => {
+      if (originalGetDistinctName) javascriptGenerator.nameDB_!.getDistinctName = originalGetDistinctName;
+    };
+  }, []);
+  const lastGeneratedCode = useRef('');
   const onWorkspaceChange = useCallback((workspace: Blockly.WorkspaceSvg) => {
     workspaceRef.current = workspace;
     setBlockCount(workspace.getAllBlocks(false).length);
