@@ -296,7 +296,7 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
 
   const lastGeneratedCode = useRef('');
 
-  const onWorkspaceChange = useCallback(Blockly.utils.deprecation.debounce((workspace: Blockly.WorkspaceSvg) => {
+  const onWorkspaceChange = useCallback((workspace: Blockly.WorkspaceSvg) => {
     workspaceRef.current = workspace;
     setBlockCount(workspace.getAllBlocks(false).length);
   
@@ -331,7 +331,7 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
       lastGeneratedCode.current = newCode;
       setBlocklyGeneratedCode(newCode);
     }
-  }, 250), [setBlocklyGeneratedCode]);
+  }, [setBlocklyGeneratedCode]); // Phụ thuộc không thay đổi
 
   const onInject = useCallback((workspace: Blockly.WorkspaceSvg) => {
     workspaceRef.current = workspace;
