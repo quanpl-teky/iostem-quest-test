@@ -1,17 +1,22 @@
 {
-  "id": "topic10-req03-debug-order-var1",
+  "id": "topic01-req01-winter-var1",
   "gameType": "maze",
   "grade": 4,
-  "topic": "topic-title-topic_10_debugging",
-  "level": 3,
-  "titleKey": "Challenge.topic10-req03-debug-order.Title",
-  "questTitleKey": "Challenge.topic10-req03-debug-order.Description",
-  "descriptionKey": "Challenge.topic10-req03-debug-order.Description",
+  "topic": "topic-title-topic_01_sequencing",
+  "level": 2,
+  "titleKey": "Challenge.topic01-req01-winter.Title",
+  "questTitleKey": "Challenge.topic01-req01-winter.Description",
+  "descriptionKey": "Challenge.topic01-req01-winter.Description",
   "translations": {
     "vi": {
-      "Challenge.topic10-req03-debug-order.Title": "Sửa lỗi: Sai thứ tự",
-      "Challenge.topic10-req03-debug-order.Description": "Các lệnh đều đúng, nhưng chúng đang ở sai vị trí. Hãy sắp xếp lại chúng để chương trình chạy đúng!",
-      "topic-title-topic_10_debugging": "Gỡ lỗi"
+      "Challenge.topic01-req01-winter.Title": "Con đường Mùa đông",
+      "Challenge.topic01-req01-winter.Description": "Hãy đi trên con đường tuyết và lấy viên pha lê.",
+      "topic-title-topic_01_sequencing": "Lập trình Tuần tự"
+    },
+    "en": {
+      "Challenge.topic01-req01-winter.Title": "Winter Path",
+      "Challenge.topic01-req01-winter.Description": "Walk on the snowy path and collect the crystal.",
+      "topic-title-topic_01_sequencing": "Lập trình Tuần tự"
     }
   },
   "supportedEditors": [
@@ -70,22 +75,14 @@
       ]
     },
     "maxBlocks": 12,
-    "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_collect\"><next><block type=\"maze_moveForward\" /></next></block></next></block></next></block></next></block></next></block></statement></block></xml>"
+    "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"></statement></block></xml>"
   },
   "gameConfig": {
     "type": "maze",
     "renderer": "3d",
     "blocks": [
       {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 3,
-          "y": 0,
-          "z": 4
-        }
-      },
-      {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.snow",
         "position": {
           "x": 4,
           "y": 0,
@@ -93,7 +90,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.snow",
         "position": {
           "x": 5,
           "y": 0,
@@ -101,7 +98,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.snow",
         "position": {
           "x": 6,
           "y": 0,
@@ -109,7 +106,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.snow",
         "position": {
           "x": 7,
           "y": 0,
@@ -117,10 +114,34 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.snow",
         "position": {
           "x": 8,
           "y": 0,
+          "z": 4
+        }
+      },
+      {
+        "modelKey": "ground.snow",
+        "position": {
+          "x": 9,
+          "y": 0,
+          "z": 4
+        }
+      },
+      {
+        "modelKey": "ice.ice01",
+        "position": {
+          "x": 6,
+          "y": 1,
+          "z": 4
+        }
+      },
+      {
+        "modelKey": "ice.ice01",
+        "position": {
+          "x": 7,
+          "y": 1,
           "z": 4
         }
       }
@@ -129,7 +150,7 @@
       {
         "id": "player1",
         "start": {
-          "x": 3,
+          "x": 4,
           "y": 1,
           "z": 4,
           "direction": 1
@@ -141,7 +162,7 @@
         "id": "c1",
         "type": "crystal",
         "position": {
-          "x": 7,
+          "x": 8,
           "y": 1,
           "z": 4
         }
@@ -149,10 +170,32 @@
     ],
     "interactibles": [],
     "finish": {
-      "x": 8,
+      "x": 9,
       "y": 1,
       "z": 4
-    }
+    },
+    "obstacles": [
+      {
+        "id": "o1",
+        "type": "obstacle",
+        "modelKey": "ice.ice01",
+        "position": {
+          "x": 6,
+          "y": 1,
+          "z": 4
+        }
+      },
+      {
+        "id": "o2",
+        "type": "obstacle",
+        "modelKey": "ice.ice01",
+        "position": {
+          "x": 7,
+          "y": 1,
+          "z": 4
+        }
+      }
+    ]
   },
   "solution": {
     "type": "reach_target",
@@ -163,9 +206,9 @@
     "optimalLines": 6,
     "rawActions": [
       "moveForward",
+      "jump",
       "moveForward",
-      "moveForward",
-      "moveForward",
+      "jump",
       "collect",
       "moveForward"
     ],
@@ -175,36 +218,13 @@
           "type": "maze_moveForward"
         },
         {
-          "type": "maze_moveForward"
+          "type": "maze_jump"
         },
         {
           "type": "maze_moveForward"
         },
         {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_collect"
-        },
-        {
-          "type": "maze_moveForward"
-        }
-      ],
-      "procedures": {}
-    },
-    "structuredSolution_fixbug_version": {
-      "main": [
-        {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_moveForward"
+          "type": "maze_jump"
         },
         {
           "type": "maze_collect"

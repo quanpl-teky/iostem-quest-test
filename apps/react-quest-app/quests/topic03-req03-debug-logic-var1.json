@@ -75,82 +75,90 @@
       ]
     },
     "maxBlocks": 16,
-    "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_turn\"><field name=\"DIR\">turnLeft</field><next><block type=\"maze_moveForward\"><next><block type=\"maze_collect\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\" /></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block></xml>"
+    "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"><block type=\"maze_turn\"><field name=\"DIR\">turnLeft</field><next><block type=\"maze_moveForward\"><next><block type=\"maze_collect\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_jump\"><next><block type=\"maze_turn\"><field name=\"DIR\">turnLeft</field><next><block type=\"maze_moveForward\"><next><block type=\"maze_jump\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\" /></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block></xml>"
   },
   "gameConfig": {
     "type": "maze",
     "renderer": "3d",
     "blocks": [
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.mud",
         "position": {
-          "x": 7,
+          "x": 2,
           "y": 0,
-          "z": 9
+          "z": 2
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.mud",
         "position": {
-          "x": 8,
+          "x": 2,
           "y": 0,
-          "z": 9
+          "z": 3
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.mud",
         "position": {
-          "x": 9,
+          "x": 2,
           "y": 0,
-          "z": 9
+          "z": 4
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.mud",
         "position": {
-          "x": 10,
+          "x": 2,
           "y": 0,
-          "z": 9
+          "z": 5
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.mud",
         "position": {
-          "x": 11,
+          "x": 3,
           "y": 0,
-          "z": 9
+          "z": 5
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.mud",
         "position": {
-          "x": 12,
+          "x": 4,
           "y": 0,
-          "z": 9
+          "z": 5
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.mud",
         "position": {
-          "x": 12,
+          "x": 5,
           "y": 0,
-          "z": 10
+          "z": 5
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.mud",
         "position": {
-          "x": 12,
+          "x": 6,
           "y": 0,
-          "z": 11
+          "z": 5
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "wall.brick04",
         "position": {
-          "x": 12,
-          "y": 0,
-          "z": 12
+          "x": 2,
+          "y": 1,
+          "z": 5
+        }
+      },
+      {
+        "modelKey": "wall.brick04",
+        "position": {
+          "x": 3,
+          "y": 1,
+          "z": 5
         }
       }
     ],
@@ -158,9 +166,9 @@
       {
         "id": "player1",
         "start": {
-          "x": 7,
+          "x": 2,
           "y": 1,
-          "z": 9,
+          "z": 2,
           "direction": 1
         }
       }
@@ -170,18 +178,40 @@
         "id": "c1",
         "type": "crystal",
         "position": {
-          "x": 12,
+          "x": 2,
           "y": 1,
-          "z": 10
+          "z": 3
         }
       }
     ],
     "interactibles": [],
     "finish": {
-      "x": 12,
+      "x": 6,
       "y": 1,
-      "z": 12
-    }
+      "z": 5
+    },
+    "obstacles": [
+      {
+        "id": "o1",
+        "type": "obstacle",
+        "modelKey": "wall.brick04",
+        "position": {
+          "x": 2,
+          "y": 1,
+          "z": 5
+        }
+      },
+      {
+        "id": "o2",
+        "type": "obstacle",
+        "modelKey": "wall.brick04",
+        "position": {
+          "x": 3,
+          "y": 1,
+          "z": 5
+        }
+      }
+    ]
   },
   "solution": {
     "type": "reach_target",
@@ -191,34 +221,19 @@
     "optimalBlocks": 11,
     "optimalLines": 10,
     "rawActions": [
-      "moveForward",
-      "moveForward",
-      "moveForward",
-      "moveForward",
-      "moveForward",
       "turnRight",
       "moveForward",
       "collect",
+      "moveForward",
+      "jump",
+      "turnLeft",
+      "moveForward",
+      "jump",
       "moveForward",
       "moveForward"
     ],
     "structuredSolution": {
       "main": [
-        {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_moveForward"
-        },
         {
           "type": "maze_turn",
           "direction": "turnRight"
@@ -233,27 +248,7 @@
           "type": "maze_moveForward"
         },
         {
-          "type": "maze_moveForward"
-        }
-      ],
-      "procedures": {}
-    },
-    "structuredSolution_fixbug_version": {
-      "main": [
-        {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_moveForward"
+          "type": "maze_jump"
         },
         {
           "type": "maze_turn",
@@ -263,7 +258,44 @@
           "type": "maze_moveForward"
         },
         {
+          "type": "maze_jump"
+        },
+        {
+          "type": "maze_moveForward"
+        },
+        {
+          "type": "maze_moveForward"
+        }
+      ],
+      "procedures": {}
+    },
+    "structuredSolution_fixbug_version": {
+      "main": [
+        {
+          "type": "maze_turn",
+          "direction": "turnLeft"
+        },
+        {
+          "type": "maze_moveForward"
+        },
+        {
           "type": "maze_collect"
+        },
+        {
+          "type": "maze_moveForward"
+        },
+        {
+          "type": "maze_jump"
+        },
+        {
+          "type": "maze_turn",
+          "direction": "turnLeft"
+        },
+        {
+          "type": "maze_moveForward"
+        },
+        {
+          "type": "maze_jump"
         },
         {
           "type": "maze_moveForward"

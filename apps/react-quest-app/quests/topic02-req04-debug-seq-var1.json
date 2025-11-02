@@ -75,50 +75,58 @@
       ]
     },
     "maxBlocks": 11,
-    "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_collect\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\" /></next></block></next></block></next></block></next></block></statement></block></xml>"
+    "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"><block type=\"maze_moveForward\"><next><block type=\"maze_collect\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_jump\"><next><block type=\"maze_jump\" /></next></block></next></block></next></block></next></block></statement></block></xml>"
   },
   "gameConfig": {
     "type": "maze",
     "renderer": "3d",
     "blocks": [
       {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 6,
-          "y": 0,
-          "z": 5
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 7,
-          "y": 0,
-          "z": 5
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 8,
-          "y": 0,
-          "z": 5
-        }
-      },
-      {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.earth",
         "position": {
           "x": 9,
           "y": 0,
-          "z": 5
+          "z": 1
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.earth",
         "position": {
           "x": 10,
           "y": 0,
-          "z": 5
+          "z": 1
+        }
+      },
+      {
+        "modelKey": "ground.earth",
+        "position": {
+          "x": 11,
+          "y": 0,
+          "z": 1
+        }
+      },
+      {
+        "modelKey": "ground.earth",
+        "position": {
+          "x": 12,
+          "y": 0,
+          "z": 1
+        }
+      },
+      {
+        "modelKey": "ground.earth",
+        "position": {
+          "x": 13,
+          "y": 0,
+          "z": 1
+        }
+      },
+      {
+        "modelKey": "stone.stone05",
+        "position": {
+          "x": 12,
+          "y": 1,
+          "z": 1
         }
       }
     ],
@@ -126,9 +134,9 @@
       {
         "id": "player1",
         "start": {
-          "x": 6,
+          "x": 9,
           "y": 1,
-          "z": 5,
+          "z": 1,
           "direction": 1
         }
       }
@@ -138,18 +146,30 @@
         "id": "c1",
         "type": "crystal",
         "position": {
-          "x": 8,
+          "x": 10,
           "y": 1,
-          "z": 5
+          "z": 1
         }
       }
     ],
     "interactibles": [],
     "finish": {
-      "x": 10,
+      "x": 13,
       "y": 1,
-      "z": 5
-    }
+      "z": 1
+    },
+    "obstacles": [
+      {
+        "id": "o1",
+        "type": "obstacle",
+        "modelKey": "stone.stone05",
+        "position": {
+          "x": 12,
+          "y": 1,
+          "z": 1
+        }
+      }
+    ]
   },
   "solution": {
     "type": "reach_target",
@@ -160,16 +180,13 @@
     "optimalLines": 5,
     "rawActions": [
       "moveForward",
-      "moveForward",
       "collect",
       "moveForward",
-      "moveForward"
+      "jump",
+      "jump"
     ],
     "structuredSolution": {
       "main": [
-        {
-          "type": "maze_moveForward"
-        },
         {
           "type": "maze_moveForward"
         },
@@ -180,7 +197,10 @@
           "type": "maze_moveForward"
         },
         {
-          "type": "maze_moveForward"
+          "type": "maze_jump"
+        },
+        {
+          "type": "maze_jump"
         }
       ],
       "procedures": {}
@@ -191,16 +211,16 @@
           "type": "maze_moveForward"
         },
         {
-          "type": "maze_moveForward"
-        },
-        {
           "type": "maze_collect"
         },
         {
           "type": "maze_moveForward"
         },
         {
-          "type": "maze_moveForward"
+          "type": "maze_jump"
+        },
+        {
+          "type": "maze_jump"
         }
       ],
       "procedures": {}

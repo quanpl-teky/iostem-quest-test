@@ -198,7 +198,7 @@
         }
       ]
     },
-    "maxBlocks": 33,
+    "maxBlocks": 32,
     "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"></statement></block></xml>"
   },
   "gameConfig": {
@@ -206,7 +206,7 @@
     "renderer": "3d",
     "blocks": [
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 2,
           "y": 0,
@@ -214,7 +214,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 2,
           "y": 0,
@@ -222,7 +222,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 2,
           "y": 0,
@@ -230,7 +230,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 3,
           "y": 0,
@@ -238,7 +238,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 3,
           "y": 0,
@@ -246,7 +246,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 3,
           "y": 0,
@@ -254,7 +254,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 4,
           "y": 0,
@@ -262,7 +262,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 4,
           "y": 0,
@@ -270,7 +270,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 4,
           "y": 0,
@@ -278,7 +278,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 5,
           "y": 0,
@@ -286,7 +286,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 6,
           "y": 0,
@@ -294,7 +294,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 6,
           "y": 1,
@@ -302,7 +302,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 7,
           "y": 1,
@@ -310,7 +310,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 7,
           "y": 2,
@@ -318,7 +318,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 7,
           "y": 2,
@@ -326,7 +326,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 7,
           "y": 2,
@@ -334,7 +334,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 7,
           "y": 4,
@@ -342,7 +342,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 7,
           "y": 4,
@@ -350,7 +350,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 7,
           "y": 4,
@@ -358,7 +358,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 7,
           "y": 10,
@@ -366,7 +366,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 7,
           "y": 10,
@@ -374,7 +374,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 8,
           "y": 2,
@@ -382,7 +382,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 8,
           "y": 2,
@@ -390,7 +390,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 8,
           "y": 2,
@@ -398,7 +398,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 8,
           "y": 2,
@@ -406,7 +406,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 8,
           "y": 2,
@@ -414,7 +414,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 8,
           "y": 3,
@@ -422,7 +422,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 8,
           "y": 3,
@@ -430,7 +430,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 8,
           "y": 4,
@@ -438,7 +438,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 8,
           "y": 4,
@@ -446,7 +446,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 8,
           "y": 4,
@@ -454,7 +454,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 8,
           "y": 10,
@@ -462,7 +462,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 8,
           "y": 10,
@@ -470,7 +470,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 9,
           "y": 2,
@@ -478,7 +478,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 9,
           "y": 2,
@@ -486,7 +486,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 9,
           "y": 2,
@@ -494,7 +494,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 9,
           "y": 4,
@@ -502,7 +502,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 9,
           "y": 4,
@@ -510,7 +510,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 9,
           "y": 4,
@@ -518,7 +518,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 9,
           "y": 9,
@@ -526,7 +526,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 9,
           "y": 10,
@@ -534,7 +534,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 9,
           "y": 10,
@@ -542,7 +542,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 10,
           "y": 4,
@@ -550,7 +550,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 10,
           "y": 8,
@@ -558,7 +558,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 10,
           "y": 9,
@@ -566,7 +566,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 11,
           "y": 4,
@@ -574,7 +574,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 11,
           "y": 5,
@@ -582,7 +582,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 11,
           "y": 8,
@@ -590,7 +590,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 12,
           "y": 5,
@@ -598,7 +598,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 12,
           "y": 6,
@@ -606,7 +606,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 12,
           "y": 6,
@@ -614,7 +614,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 12,
           "y": 6,
@@ -622,7 +622,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 12,
           "y": 8,
@@ -630,7 +630,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 12,
           "y": 8,
@@ -638,7 +638,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 13,
           "y": 6,
@@ -646,7 +646,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 13,
           "y": 6,
@@ -654,7 +654,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 13,
           "y": 6,
@@ -662,7 +662,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 13,
           "y": 6,
@@ -670,7 +670,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 13,
           "y": 6,
@@ -678,7 +678,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 13,
           "y": 7,
@@ -686,7 +686,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 13,
           "y": 7,
@@ -694,7 +694,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 13,
           "y": 8,
@@ -702,7 +702,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ice.ice01",
         "position": {
           "x": 13,
           "y": 8,
@@ -710,7 +710,7 @@
         }
       },
       {
-        "modelKey": "ground.checker",
+        "modelKey": "stone.stone02",
         "position": {
           "x": 6,
           "y": 1,
@@ -718,7 +718,7 @@
         }
       },
       {
-        "modelKey": "ground.checker",
+        "modelKey": "stone.stone02",
         "position": {
           "x": 7,
           "y": 2,
@@ -726,7 +726,7 @@
         }
       },
       {
-        "modelKey": "ground.checker",
+        "modelKey": "stone.stone02",
         "position": {
           "x": 8,
           "y": 3,
@@ -734,7 +734,7 @@
         }
       },
       {
-        "modelKey": "ground.checker",
+        "modelKey": "stone.stone02",
         "position": {
           "x": 8,
           "y": 4,
@@ -742,7 +742,7 @@
         }
       },
       {
-        "modelKey": "ground.checker",
+        "modelKey": "stone.stone02",
         "position": {
           "x": 11,
           "y": 5,
@@ -750,7 +750,7 @@
         }
       },
       {
-        "modelKey": "ground.checker",
+        "modelKey": "stone.stone02",
         "position": {
           "x": 12,
           "y": 6,
@@ -758,7 +758,7 @@
         }
       },
       {
-        "modelKey": "ground.checker",
+        "modelKey": "stone.stone02",
         "position": {
           "x": 13,
           "y": 7,
@@ -766,7 +766,7 @@
         }
       },
       {
-        "modelKey": "ground.checker",
+        "modelKey": "stone.stone02",
         "position": {
           "x": 13,
           "y": 8,
@@ -774,7 +774,7 @@
         }
       },
       {
-        "modelKey": "ground.checker",
+        "modelKey": "stone.stone02",
         "position": {
           "x": 10,
           "y": 9,
@@ -782,7 +782,7 @@
         }
       },
       {
-        "modelKey": "ground.checker",
+        "modelKey": "stone.stone02",
         "position": {
           "x": 9,
           "y": 10,
@@ -806,18 +806,18 @@
         "id": "c1",
         "type": "crystal",
         "position": {
-          "x": 11,
-          "y": 6,
-          "z": 8
+          "x": 12,
+          "y": 9,
+          "z": 13
         }
       },
       {
         "id": "c2",
         "type": "crystal",
         "position": {
-          "x": 9,
-          "y": 11,
-          "z": 13
+          "x": 5,
+          "y": 1,
+          "z": 3
         }
       }
     ],
@@ -831,7 +831,7 @@
       {
         "id": "o1",
         "type": "obstacle",
-        "modelKey": "ground.checker",
+        "modelKey": "stone.stone02",
         "position": {
           "x": 6,
           "y": 1,
@@ -841,7 +841,7 @@
       {
         "id": "o2",
         "type": "obstacle",
-        "modelKey": "ground.checker",
+        "modelKey": "stone.stone02",
         "position": {
           "x": 7,
           "y": 2,
@@ -851,7 +851,7 @@
       {
         "id": "o3",
         "type": "obstacle",
-        "modelKey": "ground.checker",
+        "modelKey": "stone.stone02",
         "position": {
           "x": 8,
           "y": 3,
@@ -861,7 +861,7 @@
       {
         "id": "o4",
         "type": "obstacle",
-        "modelKey": "ground.checker",
+        "modelKey": "stone.stone02",
         "position": {
           "x": 8,
           "y": 4,
@@ -871,7 +871,7 @@
       {
         "id": "o5",
         "type": "obstacle",
-        "modelKey": "ground.checker",
+        "modelKey": "stone.stone02",
         "position": {
           "x": 11,
           "y": 5,
@@ -881,7 +881,7 @@
       {
         "id": "o6",
         "type": "obstacle",
-        "modelKey": "ground.checker",
+        "modelKey": "stone.stone02",
         "position": {
           "x": 12,
           "y": 6,
@@ -891,7 +891,7 @@
       {
         "id": "o7",
         "type": "obstacle",
-        "modelKey": "ground.checker",
+        "modelKey": "stone.stone02",
         "position": {
           "x": 13,
           "y": 7,
@@ -901,7 +901,7 @@
       {
         "id": "o8",
         "type": "obstacle",
-        "modelKey": "ground.checker",
+        "modelKey": "stone.stone02",
         "position": {
           "x": 13,
           "y": 8,
@@ -911,7 +911,7 @@
       {
         "id": "o9",
         "type": "obstacle",
-        "modelKey": "ground.checker",
+        "modelKey": "stone.stone02",
         "position": {
           "x": 10,
           "y": 9,
@@ -921,7 +921,7 @@
       {
         "id": "o10",
         "type": "obstacle",
-        "modelKey": "ground.checker",
+        "modelKey": "stone.stone02",
         "position": {
           "x": 9,
           "y": 10,
@@ -934,38 +934,35 @@
     "type": "reach_target",
     "itemGoals": {
       "crystal": 1,
-      "gem": 1
+      "key": 1
     },
-    "optimalBlocks": 28,
-    "optimalLines": 27,
+    "optimalBlocks": 27,
+    "optimalLines": 26,
     "rawActions": [
       "moveForward",
       "moveForward",
-      "jump",
-      "jump",
-      "moveForward",
-      "turnRight",
-      "moveForward",
-      "moveForward",
-      "jump",
-      "jump",
+      "collect",
+      "collect",
       "moveForward",
       "turnLeft",
       "moveForward",
+      "jump",
+      "jump",
+      "moveForward",
+      "moveForward",
+      "turnLeft",
       "moveForward",
       "jump",
-      "collect",
-      "collect",
       "jump",
+      "moveForward",
       "moveForward",
       "turnRight",
       "moveForward",
-      "moveForward",
       "jump",
       "jump",
       "moveForward",
-      "turnRight",
       "moveForward",
+      "turnLeft",
       "moveForward",
       "jump",
       "jump",
@@ -973,38 +970,44 @@
       "collect",
       "turnLeft",
       "turnLeft",
+      "moveForward",
+      "jump",
+      "jump",
       "moveForward"
     ],
     "structuredSolution": {
       "main": [
         {
-          "type": "CALL",
-          "name": "PROCEDURE_1"
-        },
-        {
-          "type": "CALL",
-          "name": "PROCEDURE_2"
+          "type": "maze_moveForward"
         },
         {
           "type": "maze_moveForward"
         },
         {
-          "type": "maze_turn",
-          "direction": "turnLeft"
-        },
-        {
-          "type": "CALL",
-          "name": "PROCEDURE_1"
-        },
-        {
           "type": "maze_collect"
         },
         {
           "type": "maze_collect"
         },
         {
-          "type": "CALL",
-          "name": "PROCEDURE_2"
+          "type": "maze_repeat",
+          "times": 2,
+          "body": [
+            {
+              "type": "maze_moveForward"
+            },
+            {
+              "type": "maze_turn",
+              "direction": "turnLeft"
+            },
+            {
+              "type": "CALL",
+              "name": "PROCEDURE_1"
+            },
+            {
+              "type": "maze_moveForward"
+            }
+          ]
         },
         {
           "type": "maze_moveForward"
@@ -1018,7 +1021,18 @@
           "name": "PROCEDURE_1"
         },
         {
-          "type": "maze_jump"
+          "type": "maze_moveForward"
+        },
+        {
+          "type": "maze_moveForward"
+        },
+        {
+          "type": "maze_turn",
+          "direction": "turnLeft"
+        },
+        {
+          "type": "CALL",
+          "name": "PROCEDURE_1"
         },
         {
           "type": "maze_collect"
@@ -1033,6 +1047,10 @@
         {
           "type": "maze_turn",
           "direction": "turnLeft"
+        },
+        {
+          "type": "CALL",
+          "name": "PROCEDURE_1"
         },
         {
           "type": "maze_moveForward"
@@ -1044,26 +1062,7 @@
             "type": "maze_moveForward"
           },
           {
-            "type": "maze_moveForward"
-          },
-          {
             "type": "maze_jump"
-          }
-        ],
-        "PROCEDURE_2": [
-          {
-            "type": "maze_jump"
-          },
-          {
-            "type": "maze_moveForward"
-          },
-          {
-            "type": "maze_turn",
-            "direction": "turnRight"
-          },
-          {
-            "type": "CALL",
-            "name": "PROCEDURE_1"
           },
           {
             "type": "maze_jump"

@@ -1,17 +1,22 @@
 {
-  "id": "topic10-req04-debug-missing-var1",
+  "id": "topic01-req01-castle-var1",
   "gameType": "maze",
   "grade": 4,
-  "topic": "topic-title-topic_10_debugging",
+  "topic": "topic-title-topic_01_sequencing",
   "level": 4,
-  "titleKey": "Challenge.topic10-req04-debug-missing.Title",
-  "questTitleKey": "Challenge.topic10-req04-debug-missing.Description",
-  "descriptionKey": "Challenge.topic10-req04-debug-missing.Description",
+  "titleKey": "Challenge.topic01-req01-castle.Title",
+  "questTitleKey": "Challenge.topic01-req01-castle.Description",
+  "descriptionKey": "Challenge.topic01-req01-castle.Description",
   "translations": {
     "vi": {
-      "Challenge.topic10-req04-debug-missing.Title": "Sửa lỗi: Thiếu lệnh",
-      "Challenge.topic10-req04-debug-missing.Description": "Chương trình này bỏ lỡ một việc quan trọng. Hãy tìm xem lệnh nào còn thiếu và bổ sung nó vào.",
-      "topic-title-topic_10_debugging": "Gỡ lỗi"
+      "Challenge.topic01-req01-castle.Title": "Lâu đài Đá",
+      "Challenge.topic01-req01-castle.Description": "Đi trên nền đá và lấy viên pha lê.",
+      "topic-title-topic_01_sequencing": "Lập trình Tuần tự"
+    },
+    "en": {
+      "Challenge.topic01-req01-castle.Title": "Stone Castle",
+      "Challenge.topic01-req01-castle.Description": "Walk on the stone floor and collect the crystal.",
+      "topic-title-topic_01_sequencing": "Lập trình Tuần tự"
     }
   },
   "supportedEditors": [
@@ -69,67 +74,75 @@
         }
       ]
     },
-    "maxBlocks": 13,
-    "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_collect\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\" /></next></block></next></block></next></block></next></block></next></block></statement></block></xml>"
+    "maxBlocks": 12,
+    "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"></statement></block></xml>"
   },
   "gameConfig": {
     "type": "maze",
     "renderer": "3d",
     "blocks": [
       {
-        "modelKey": "ground.normal",
+        "modelKey": "stone.stone01",
         "position": {
           "x": 2,
           "y": 0,
-          "z": 3
+          "z": 2
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "stone.stone01",
         "position": {
           "x": 3,
           "y": 0,
-          "z": 3
+          "z": 2
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "stone.stone01",
         "position": {
           "x": 4,
           "y": 0,
-          "z": 3
+          "z": 2
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "stone.stone01",
         "position": {
           "x": 5,
           "y": 0,
-          "z": 3
+          "z": 2
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "stone.stone01",
         "position": {
           "x": 6,
           "y": 0,
-          "z": 3
+          "z": 2
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "stone.stone01",
         "position": {
           "x": 7,
           "y": 0,
-          "z": 3
+          "z": 2
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "wall.brick03",
         "position": {
-          "x": 8,
-          "y": 0,
-          "z": 3
+          "x": 6,
+          "y": 1,
+          "z": 2
+        }
+      },
+      {
+        "modelKey": "wall.brick03",
+        "position": {
+          "x": 4,
+          "y": 1,
+          "z": 2
         }
       }
     ],
@@ -139,7 +152,7 @@
         "start": {
           "x": 2,
           "y": 1,
-          "z": 3,
+          "z": 2,
           "direction": 1
         }
       }
@@ -149,34 +162,55 @@
         "id": "c1",
         "type": "crystal",
         "position": {
-          "x": 4,
+          "x": 5,
           "y": 1,
-          "z": 3
+          "z": 2
         }
       }
     ],
     "interactibles": [],
     "finish": {
-      "x": 8,
+      "x": 7,
       "y": 1,
-      "z": 3
-    }
+      "z": 2
+    },
+    "obstacles": [
+      {
+        "id": "o1",
+        "type": "obstacle",
+        "modelKey": "wall.brick03",
+        "position": {
+          "x": 6,
+          "y": 1,
+          "z": 2
+        }
+      },
+      {
+        "id": "o2",
+        "type": "obstacle",
+        "modelKey": "wall.brick03",
+        "position": {
+          "x": 4,
+          "y": 1,
+          "z": 2
+        }
+      }
+    ]
   },
   "solution": {
     "type": "reach_target",
     "itemGoals": {
       "crystal": 1
     },
-    "optimalBlocks": 8,
-    "optimalLines": 7,
+    "optimalBlocks": 7,
+    "optimalLines": 6,
     "rawActions": [
       "moveForward",
-      "moveForward",
+      "jump",
+      "jump",
       "collect",
-      "moveForward",
-      "moveForward",
-      "moveForward",
-      "moveForward"
+      "jump",
+      "jump"
     ],
     "structuredSolution": {
       "main": [
@@ -184,45 +218,19 @@
           "type": "maze_moveForward"
         },
         {
-          "type": "maze_moveForward"
+          "type": "maze_jump"
+        },
+        {
+          "type": "maze_jump"
         },
         {
           "type": "maze_collect"
         },
         {
-          "type": "maze_moveForward"
+          "type": "maze_jump"
         },
         {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_moveForward"
-        }
-      ],
-      "procedures": {}
-    },
-    "structuredSolution_fixbug_version": {
-      "main": [
-        {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_collect"
-        },
-        {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_moveForward"
+          "type": "maze_jump"
         }
       ],
       "procedures": {}
