@@ -1,16 +1,16 @@
 {
-  "id": "test_straight_line_01-var1",
+  "id": "test_staircase_01-var1",
   "gameType": "maze",
   "grade": 4,
   "topic": "topic-title-topic_100",
-  "level": 2,
-  "titleKey": "Challenge.test_straight_line_01.Title",
-  "questTitleKey": "Challenge.test_straight_line_01.Description",
-  "descriptionKey": "Challenge.test_straight_line_01.Description",
+  "level": 3,
+  "titleKey": "Challenge.test_staircase_01.Title",
+  "questTitleKey": "Challenge.test_staircase_01.Description",
+  "descriptionKey": "Challenge.test_staircase_01.Description",
   "translations": {
     "vi": {
-      "Challenge.test_straight_line_01.Title": "Test Đường thẳng",
-      "Challenge.test_straight_line_01.Description": "Kiểm tra map 'straight_line' cơ bản.",
+      "Challenge.test_staircase_01.Title": "Test Bậc thang 2D",
+      "Challenge.test_staircase_01.Description": "Kiểm tra map 'staircase' 2D đi lên.",
       "topic-title-topic_100": "Kiểm tra các Map còn lại"
     }
   },
@@ -193,7 +193,7 @@
         }
       ]
     },
-    "maxBlocks": 14,
+    "maxBlocks": 13,
     "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"></statement></block></xml>"
   },
   "gameConfig": {
@@ -203,47 +203,7 @@
       {
         "modelKey": "ground.normal",
         "position": {
-          "x": 0,
-          "y": 0,
-          "z": 3
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 0,
-          "y": 0,
-          "z": 4
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 0,
-          "y": 0,
-          "z": 5
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 0,
-          "y": 0,
-          "z": 6
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 0,
-          "y": 0,
-          "z": 7
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 0,
+          "x": 13,
           "y": 0,
           "z": 8
         }
@@ -251,7 +211,7 @@
       {
         "modelKey": "ground.normal",
         "position": {
-          "x": 0,
+          "x": 13,
           "y": 0,
           "z": 9
         }
@@ -259,7 +219,7 @@
       {
         "modelKey": "ground.normal",
         "position": {
-          "x": 0,
+          "x": 13,
           "y": 0,
           "z": 10
         }
@@ -267,17 +227,81 @@
       {
         "modelKey": "ground.normal",
         "position": {
-          "x": 0,
-          "y": 0,
-          "z": 11
+          "x": 13,
+          "y": 1,
+          "z": 6
         }
       },
       {
         "modelKey": "ground.normal",
         "position": {
-          "x": 0,
-          "y": 0,
-          "z": 12
+          "x": 13,
+          "y": 1,
+          "z": 7
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 13,
+          "y": 1,
+          "z": 8
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 13,
+          "y": 2,
+          "z": 4
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 13,
+          "y": 2,
+          "z": 5
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 13,
+          "y": 2,
+          "z": 6
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 13,
+          "y": 3,
+          "z": 2
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 13,
+          "y": 3,
+          "z": 3
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 13,
+          "y": 3,
+          "z": 4
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 13,
+          "y": 4,
+          "z": 2
         }
       }
     ],
@@ -285,9 +309,9 @@
       {
         "id": "player1",
         "start": {
-          "x": 0,
+          "x": 13,
           "y": 1,
-          "z": 3,
+          "z": 10,
           "direction": 1
         }
       }
@@ -295,33 +319,32 @@
     "collectibles": [],
     "interactibles": [],
     "finish": {
-      "x": 0,
-      "y": 1,
-      "z": 12
+      "x": 13,
+      "y": 5,
+      "z": 2
     }
   },
   "solution": {
     "type": "reach_target",
     "itemGoals": {},
-    "optimalBlocks": 9,
-    "optimalLines": 8,
+    "optimalBlocks": 8,
+    "optimalLines": 7,
     "rawActions": [
-      "turnRight",
+      "turnLeft",
       "moveForward",
+      "jump",
       "moveForward",
+      "jump",
       "moveForward",
+      "jump",
       "moveForward",
-      "moveForward",
-      "moveForward",
-      "moveForward",
-      "moveForward",
-      "moveForward"
+      "jump"
     ],
     "structuredSolution": {
       "main": [
         {
           "type": "maze_turn",
-          "direction": "turnRight"
+          "direction": "turnLeft"
         },
         {
           "type": "CALL",
@@ -330,9 +353,6 @@
         {
           "type": "CALL",
           "name": "PROCEDURE_1"
-        },
-        {
-          "type": "maze_moveForward"
         }
       ],
       "procedures": {
@@ -345,7 +365,7 @@
                 "type": "maze_moveForward"
               },
               {
-                "type": "maze_moveForward"
+                "type": "maze_jump"
               }
             ]
           }

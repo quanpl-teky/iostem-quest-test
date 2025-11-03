@@ -1,17 +1,17 @@
 {
-  "id": "test_straight_line_01-var1",
+  "id": "test_islands_03_islands_with_obstacles-var1",
   "gameType": "maze",
   "grade": 4,
-  "topic": "topic-title-topic_100",
-  "level": 2,
-  "titleKey": "Challenge.test_straight_line_01.Title",
-  "questTitleKey": "Challenge.test_straight_line_01.Description",
-  "descriptionKey": "Challenge.test_straight_line_01.Description",
+  "topic": "topic-title-topic_101",
+  "level": 3,
+  "titleKey": "Challenge.test_islands_03.Title",
+  "questTitleKey": "Challenge.test_islands_03.Description",
+  "descriptionKey": "Challenge.test_islands_03.Description",
   "translations": {
     "vi": {
-      "Challenge.test_straight_line_01.Title": "Test Đường thẳng",
-      "Challenge.test_straight_line_01.Description": "Kiểm tra map 'straight_line' cơ bản.",
-      "topic-title-topic_100": "Kiểm tra các Map còn lại"
+      "Challenge.test_islands_03.Title": "Đảo Chướng Ngại Vật",
+      "Challenge.test_islands_03.Description": "Kiểm tra map 'symmetrical_islands' kết hợp với 'ObstaclePlacer'.",
+      "topic-title-topic_101": "Kiểm tra các dạng Đảo"
     }
   },
   "supportedEditors": [
@@ -193,7 +193,7 @@
         }
       ]
     },
-    "maxBlocks": 14,
+    "maxBlocks": 15,
     "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"></statement></block></xml>"
   },
   "gameConfig": {
@@ -203,47 +203,7 @@
       {
         "modelKey": "ground.normal",
         "position": {
-          "x": 0,
-          "y": 0,
-          "z": 3
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 0,
-          "y": 0,
-          "z": 4
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 0,
-          "y": 0,
-          "z": 5
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 0,
-          "y": 0,
-          "z": 6
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 0,
-          "y": 0,
-          "z": 7
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 0,
+          "x": 1,
           "y": 0,
           "z": 8
         }
@@ -251,7 +211,7 @@
       {
         "modelKey": "ground.normal",
         "position": {
-          "x": 0,
+          "x": 1,
           "y": 0,
           "z": 9
         }
@@ -259,7 +219,7 @@
       {
         "modelKey": "ground.normal",
         "position": {
-          "x": 0,
+          "x": 1,
           "y": 0,
           "z": 10
         }
@@ -267,17 +227,193 @@
       {
         "modelKey": "ground.normal",
         "position": {
-          "x": 0,
+          "x": 2,
           "y": 0,
-          "z": 11
+          "z": 8
         }
       },
       {
         "modelKey": "ground.normal",
         "position": {
-          "x": 0,
+          "x": 2,
           "y": 0,
-          "z": 12
+          "z": 10
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 3,
+          "y": 0,
+          "z": 8
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 3,
+          "y": 0,
+          "z": 9
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 3,
+          "y": 0,
+          "z": 10
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 4,
+          "y": 0,
+          "z": 8
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 5,
+          "y": 0,
+          "z": 8
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 6,
+          "y": 0,
+          "z": 8
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 7,
+          "y": 0,
+          "z": 8
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 8,
+          "y": 0,
+          "z": 8
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 9,
+          "y": 0,
+          "z": 8
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 10,
+          "y": 0,
+          "z": 8
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 10,
+          "y": 0,
+          "z": 9
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 10,
+          "y": 0,
+          "z": 10
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 11,
+          "y": 0,
+          "z": 8
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 11,
+          "y": 0,
+          "z": 10
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 12,
+          "y": 0,
+          "z": 8
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 12,
+          "y": 0,
+          "z": 9
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 12,
+          "y": 0,
+          "z": 10
+        }
+      },
+      {
+        "modelKey": "wall.brick01",
+        "position": {
+          "x": 12,
+          "y": 1,
+          "z": 9
+        }
+      },
+      {
+        "modelKey": "wall.brick01",
+        "position": {
+          "x": 1,
+          "y": 1,
+          "z": 10
+        }
+      },
+      {
+        "modelKey": "wall.brick01",
+        "position": {
+          "x": 11,
+          "y": 1,
+          "z": 8
+        }
+      },
+      {
+        "modelKey": "wall.brick01",
+        "position": {
+          "x": 10,
+          "y": 1,
+          "z": 8
+        }
+      },
+      {
+        "modelKey": "wall.brick01",
+        "position": {
+          "x": 12,
+          "y": 1,
+          "z": 10
         }
       }
     ],
@@ -285,9 +421,9 @@
       {
         "id": "player1",
         "start": {
-          "x": 0,
+          "x": 1,
           "y": 1,
-          "z": 3,
+          "z": 8,
           "direction": 1
         }
       }
@@ -295,44 +431,100 @@
     "collectibles": [],
     "interactibles": [],
     "finish": {
-      "x": 0,
+      "x": 10,
       "y": 1,
-      "z": 12
-    }
+      "z": 9
+    },
+    "obstacles": [
+      {
+        "id": "o1",
+        "type": "obstacle",
+        "modelKey": "wall.brick01",
+        "position": {
+          "x": 12,
+          "y": 1,
+          "z": 9
+        }
+      },
+      {
+        "id": "o2",
+        "type": "obstacle",
+        "modelKey": "wall.brick01",
+        "position": {
+          "x": 1,
+          "y": 1,
+          "z": 10
+        }
+      },
+      {
+        "id": "o3",
+        "type": "obstacle",
+        "modelKey": "wall.brick01",
+        "position": {
+          "x": 11,
+          "y": 1,
+          "z": 8
+        }
+      },
+      {
+        "id": "o4",
+        "type": "obstacle",
+        "modelKey": "wall.brick01",
+        "position": {
+          "x": 10,
+          "y": 1,
+          "z": 8
+        }
+      },
+      {
+        "id": "o5",
+        "type": "obstacle",
+        "modelKey": "wall.brick01",
+        "position": {
+          "x": 12,
+          "y": 1,
+          "z": 10
+        }
+      }
+    ]
   },
   "solution": {
     "type": "reach_target",
     "itemGoals": {},
-    "optimalBlocks": 9,
-    "optimalLines": 8,
+    "optimalBlocks": 10,
+    "optimalLines": 9,
     "rawActions": [
+      "moveForward",
+      "moveForward",
+      "moveForward",
+      "moveForward",
+      "moveForward",
+      "moveForward",
+      "moveForward",
+      "moveForward",
+      "jump",
       "turnRight",
-      "moveForward",
-      "moveForward",
-      "moveForward",
-      "moveForward",
-      "moveForward",
-      "moveForward",
-      "moveForward",
-      "moveForward",
-      "moveForward"
+      "jump"
     ],
     "structuredSolution": {
       "main": [
+        {
+          "type": "CALL",
+          "name": "PROCEDURE_1"
+        },
+        {
+          "type": "CALL",
+          "name": "PROCEDURE_1"
+        },
+        {
+          "type": "maze_jump"
+        },
         {
           "type": "maze_turn",
           "direction": "turnRight"
         },
         {
-          "type": "CALL",
-          "name": "PROCEDURE_1"
-        },
-        {
-          "type": "CALL",
-          "name": "PROCEDURE_1"
-        },
-        {
-          "type": "maze_moveForward"
+          "type": "maze_jump"
         }
       ],
       "procedures": {

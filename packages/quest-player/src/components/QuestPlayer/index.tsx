@@ -55,6 +55,8 @@ interface DisplayStats {
   totalCrystals?: number;
   switchesOn?: number;
   totalSwitches?: number;
+  keysCollected?: number;
+  totalKeys?: number;
   lineCount?: number;
   optimalLines?: number;
 }
@@ -287,6 +289,8 @@ export const QuestPlayer: React.FC<QuestPlayerProps> = (props) => {
         if (mazeConfig.collectibles && mazeConfig.collectibles.length > 0) {
           newStats.totalCrystals = mazeConfig.collectibles.length;
           newStats.crystalsCollected = mazeState.collectedIds.length;
+          newStats.totalKeys = mazeConfig.collectibles.length;
+          newStats.keysCollected = mazeState.collectedIds.length;
         }
         const switches = mazeConfig.interactibles?.filter((i: Interactive) => i.type === 'switch');
         if (switches && switches.length > 0) {

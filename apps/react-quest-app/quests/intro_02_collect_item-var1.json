@@ -1,0 +1,255 @@
+{
+  "id": "intro_02_collect_item-var1",
+  "gameType": "maze",
+  "grade": 4,
+  "topic": "topic-title-topic_01",
+  "level": 2,
+  "titleKey": "Challenge.intro_02_collect_item.Title",
+  "questTitleKey": "Challenge.intro_02_collect_item.Description",
+  "descriptionKey": "Challenge.intro_02_collect_item.Description",
+  "translations": {
+    "vi": {
+      "Challenge.intro_02_collect_item.Title": "Thu thập pha lê",
+      "Challenge.intro_02_collect_item.Description": "Di chuyển và sử dụng khối 'collect' để thu thập tất cả pha lê trên đường đi.",
+      "topic-title-topic_01": "Giới thiệu"
+    }
+  },
+  "supportedEditors": [
+    "blockly",
+    "monaco"
+  ],
+  "blocklyConfig": {
+    "toolbox": {
+      "kind": "categoryToolbox",
+      "contents": [
+        {
+          "kind": "category",
+          "name": "%{BKY_GAMES_CATEVENTS}",
+          "categorystyle": "events_category",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "maze_start"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "%{BKY_GAMES_CATMOVEMENT}",
+          "categorystyle": "movement_category",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "maze_moveForward"
+            },
+            {
+              "kind": "block",
+              "type": "maze_turn"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "%{BKY_GAMES_CATACTIONS}",
+          "categorystyle": "actions_category",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "maze_collect"
+            }
+          ]
+        }
+      ]
+    },
+    "maxBlocks": 17,
+    "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"></statement></block></xml>"
+  },
+  "gameConfig": {
+    "type": "maze",
+    "renderer": "3d",
+    "blocks": [
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 6,
+          "y": 0,
+          "z": 5
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 7,
+          "y": 0,
+          "z": 5
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 8,
+          "y": 0,
+          "z": 5
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 9,
+          "y": 0,
+          "z": 5
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 10,
+          "y": 0,
+          "z": 5
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 11,
+          "y": 0,
+          "z": 5
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 12,
+          "y": 0,
+          "z": 5
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 13,
+          "y": 0,
+          "z": 5
+        }
+      }
+    ],
+    "players": [
+      {
+        "id": "player1",
+        "start": {
+          "x": 6,
+          "y": 1,
+          "z": 5,
+          "direction": 1
+        }
+      }
+    ],
+    "collectibles": [
+      {
+        "id": "c1",
+        "type": "crystal",
+        "position": {
+          "x": 10,
+          "y": 1,
+          "z": 5
+        }
+      },
+      {
+        "id": "c2",
+        "type": "crystal",
+        "position": {
+          "x": 8,
+          "y": 1,
+          "z": 5
+        }
+      },
+      {
+        "id": "c3",
+        "type": "crystal",
+        "position": {
+          "x": 9,
+          "y": 1,
+          "z": 5
+        }
+      },
+      {
+        "id": "c4",
+        "type": "crystal",
+        "position": {
+          "x": 7,
+          "y": 1,
+          "z": 5
+        }
+      }
+    ],
+    "interactibles": [],
+    "finish": {
+      "x": 13,
+      "y": 1,
+      "z": 5
+    }
+  },
+  "solution": {
+    "type": "reach_target",
+    "itemGoals": {
+      "crystal": 4
+    },
+    "optimalBlocks": 12,
+    "optimalLines": 11,
+    "rawActions": [
+      "moveForward",
+      "collect",
+      "moveForward",
+      "collect",
+      "moveForward",
+      "collect",
+      "moveForward",
+      "collect",
+      "moveForward",
+      "moveForward",
+      "moveForward"
+    ],
+    "structuredSolution": {
+      "main": [
+        {
+          "type": "maze_moveForward"
+        },
+        {
+          "type": "maze_collect"
+        },
+        {
+          "type": "maze_moveForward"
+        },
+        {
+          "type": "maze_collect"
+        },
+        {
+          "type": "maze_moveForward"
+        },
+        {
+          "type": "maze_collect"
+        },
+        {
+          "type": "maze_moveForward"
+        },
+        {
+          "type": "maze_collect"
+        },
+        {
+          "type": "maze_moveForward"
+        },
+        {
+          "type": "maze_moveForward"
+        },
+        {
+          "type": "maze_moveForward"
+        }
+      ],
+      "procedures": {}
+    }
+  },
+  "sounds": {
+    "win": "/assets/maze/win.mp3",
+    "fail": "/assets/maze/fail_pegman.mp3"
+  }
+}
