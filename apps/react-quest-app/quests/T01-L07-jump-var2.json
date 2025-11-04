@@ -71,7 +71,7 @@
         "position": {
           "x": 4,
           "y": 0,
-          "z": 1
+          "z": 3
         }
       },
       {
@@ -79,7 +79,15 @@
         "position": {
           "x": 5,
           "y": 0,
-          "z": 1
+          "z": 3
+        }
+      },
+      {
+        "modelKey": "ground.snow",
+        "position": {
+          "x": 5,
+          "y": 1,
+          "z": 3
         }
       },
       {
@@ -87,7 +95,7 @@
         "position": {
           "x": 6,
           "y": 0,
-          "z": 1
+          "z": 3
         }
       },
       {
@@ -95,7 +103,7 @@
         "position": {
           "x": 7,
           "y": 0,
-          "z": 1
+          "z": 3
         }
       },
       {
@@ -103,7 +111,7 @@
         "position": {
           "x": 8,
           "y": 0,
-          "z": 1
+          "z": 3
         }
       },
       {
@@ -111,7 +119,15 @@
         "position": {
           "x": 9,
           "y": 0,
-          "z": 1
+          "z": 3
+        }
+      },
+      {
+        "modelKey": "ground.snow",
+        "position": {
+          "x": 9,
+          "y": 1,
+          "z": 3
         }
       },
       {
@@ -119,7 +135,7 @@
         "position": {
           "x": 10,
           "y": 0,
-          "z": 1
+          "z": 3
         }
       },
       {
@@ -127,7 +143,7 @@
         "position": {
           "x": 11,
           "y": 0,
-          "z": 1
+          "z": 3
         }
       },
       {
@@ -135,7 +151,7 @@
         "position": {
           "x": 12,
           "y": 0,
-          "z": 1
+          "z": 3
         }
       },
       {
@@ -143,23 +159,23 @@
         "position": {
           "x": 13,
           "y": 0,
-          "z": 1
+          "z": 3
         }
       },
       {
         "modelKey": "ice.ice01",
         "position": {
-          "x": 10,
+          "x": 9,
           "y": 1,
-          "z": 1
+          "z": 3
         }
       },
       {
         "modelKey": "ice.ice01",
         "position": {
-          "x": 6,
+          "x": 5,
           "y": 1,
-          "z": 1
+          "z": 3
         }
       }
     ],
@@ -169,7 +185,7 @@
         "start": {
           "x": 4,
           "y": 1,
-          "z": 1,
+          "z": 3,
           "direction": 1
         }
       }
@@ -179,7 +195,7 @@
     "finish": {
       "x": 13,
       "y": 1,
-      "z": 1
+      "z": 3
     },
     "obstacles": [
       {
@@ -187,9 +203,9 @@
         "type": "obstacle",
         "modelKey": "ice.ice01",
         "position": {
-          "x": 10,
+          "x": 9,
           "y": 1,
-          "z": 1
+          "z": 3
         }
       },
       {
@@ -197,9 +213,9 @@
         "type": "obstacle",
         "modelKey": "ice.ice01",
         "position": {
-          "x": 6,
+          "x": 5,
           "y": 1,
-          "z": 1
+          "z": 3
         }
       }
     ]
@@ -210,22 +226,19 @@
     "optimalBlocks": 10,
     "optimalLines": 9,
     "rawActions": [
-      "moveForward",
       "jump",
       "jump",
       "moveForward",
       "moveForward",
       "jump",
       "jump",
+      "moveForward",
       "moveForward",
       "moveForward"
     ],
     "structuredSolution": {
       "main": [
         {
-          "type": "maze_moveForward"
-        },
-        {
           "type": "maze_jump"
         },
         {
@@ -242,6 +255,9 @@
         },
         {
           "type": "maze_jump"
+        },
+        {
+          "type": "maze_moveForward"
         },
         {
           "type": "maze_moveForward"

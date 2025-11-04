@@ -76,6 +76,14 @@
       {
         "modelKey": "ground.normal",
         "position": {
+          "x": 7,
+          "y": 0,
+          "z": 6
+        }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
           "x": 8,
           "y": 0,
           "z": 6
@@ -104,21 +112,13 @@
           "y": 0,
           "z": 6
         }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 12,
-          "y": 0,
-          "z": 6
-        }
       }
     ],
     "players": [
       {
         "id": "player1",
         "start": {
-          "x": 8,
+          "x": 7,
           "y": 1,
           "z": 6,
           "direction": 1
@@ -138,7 +138,7 @@
     ],
     "interactibles": [],
     "finish": {
-      "x": 12,
+      "x": 11,
       "y": 1,
       "z": 6
     }
@@ -152,8 +152,8 @@
     "optimalLines": 5,
     "rawActions": [
       "moveForward",
-      "collect",
       "moveForward",
+      "collect",
       "moveForward",
       "moveForward"
     ],
@@ -163,10 +163,10 @@
           "type": "maze_moveForward"
         },
         {
-          "type": "maze_collect"
+          "type": "maze_moveForward"
         },
         {
-          "type": "maze_moveForward"
+          "type": "maze_collect"
         },
         {
           "type": "maze_moveForward"

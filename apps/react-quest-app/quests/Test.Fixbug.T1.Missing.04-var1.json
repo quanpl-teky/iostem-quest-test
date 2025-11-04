@@ -1,17 +1,22 @@
 {
-  "id": "intro_08_zigzag_path-var1",
+  "id": "Test.Fixbug.T1.Missing.04-var1",
   "gameType": "maze",
   "grade": 4,
-  "topic": "topic-title-topic_01",
-  "level": 8,
-  "titleKey": "Challenge.intro_08_zigzag_path.Title",
-  "questTitleKey": "Challenge.intro_08_zigzag_path.Description",
-  "descriptionKey": "Challenge.intro_08_zigzag_path.Description",
+  "topic": "topic-title-topic_105_test_fixbug_t1_missing",
+  "level": 4,
+  "titleKey": "Challenge.Test.Fixbug.T1.Missing.04.Title",
+  "questTitleKey": "Challenge.Test.Fixbug.T1.Missing.04.Description",
+  "descriptionKey": "Challenge.Test.Fixbug.T1.Missing.04.Description",
   "translations": {
     "vi": {
-      "Challenge.intro_08_zigzag_path.Title": "Đường đi Ziczac",
-      "Challenge.intro_08_zigzag_path.Description": "Con đường này có nhiều khúc cua. Hãy di chuyển cẩn thận để về đích!",
-      "topic-title-topic_01": "Giới thiệu"
+      "Challenge.Test.Fixbug.T1.Missing.04.Title": "Sửa lỗi: Thiếu lệnh Nhảy",
+      "Challenge.Test.Fixbug.T1.Missing.04.Description": "Nhân vật đang bị kẹt ở bức tường. Chương trình này thiếu một lệnh quan trọng. Hãy tìm vị trí đúng và thêm khối 'nhảy' để vượt qua chướng ngại vật.",
+      "topic-title-topic_105_test_fixbug_t1_missing": "Kiểm tra Fixbug - Thiếu Lệnh"
+    },
+    "en": {
+      "Challenge.Test.Fixbug.T1.Missing.04.Title": "Fix the Bug: Missing Jump",
+      "Challenge.Test.Fixbug.T1.Missing.04.Description": "The character is stuck at the wall. This program is missing a crucial command. Find the right spot and add a 'jump' block to get over the obstacle.",
+      "topic-title-topic_105_test_fixbug_t1_missing": "Kiểm tra Fixbug - Thiếu Lệnh"
     }
   },
   "supportedEditors": [
@@ -45,20 +50,56 @@
             {
               "kind": "block",
               "type": "maze_turn"
+            },
+            {
+              "kind": "block",
+              "type": "maze_jump"
             }
           ]
         }
       ]
     },
-    "maxBlocks": 22,
-    "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"></statement></block></xml>"
+    "maxBlocks": 13,
+    "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"><block type=\"maze_turn\"><field name=\"DIR\">turnRight</field><next><block type=\"maze_moveForward\"><next><block type=\"maze_jump\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\" /></next></block></next></block></next></block></next></block></next></block></statement></block></xml>"
   },
   "gameConfig": {
     "type": "maze",
     "renderer": "3d",
     "blocks": [
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.mud",
+        "position": {
+          "x": 1,
+          "y": 0,
+          "z": 1
+        }
+      },
+      {
+        "modelKey": "ground.mud",
+        "position": {
+          "x": 1,
+          "y": 0,
+          "z": 2
+        }
+      },
+      {
+        "modelKey": "ground.mud",
+        "position": {
+          "x": 1,
+          "y": 0,
+          "z": 3
+        }
+      },
+      {
+        "modelKey": "ground.mud",
+        "position": {
+          "x": 1,
+          "y": 0,
+          "z": 4
+        }
+      },
+      {
+        "modelKey": "ground.mud",
         "position": {
           "x": 1,
           "y": 0,
@@ -66,7 +107,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.mud",
         "position": {
           "x": 1,
           "y": 0,
@@ -74,7 +115,7 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.mud",
         "position": {
           "x": 1,
           "y": 0,
@@ -82,83 +123,19 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.mud",
         "position": {
           "x": 1,
-          "y": 0,
-          "z": 8
+          "y": 1,
+          "z": 3
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "wall.brick03",
         "position": {
-          "x": 2,
-          "y": 0,
-          "z": 8
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 3,
-          "y": 0,
-          "z": 8
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 4,
-          "y": 0,
-          "z": 8
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 4,
-          "y": 0,
-          "z": 9
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 4,
-          "y": 0,
-          "z": 10
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 4,
-          "y": 0,
-          "z": 11
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 5,
-          "y": 0,
-          "z": 11
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 6,
-          "y": 0,
-          "z": 11
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 7,
-          "y": 0,
-          "z": 11
+          "x": 1,
+          "y": 1,
+          "z": 3
         }
       }
     ],
@@ -168,7 +145,7 @@
         "start": {
           "x": 1,
           "y": 1,
-          "z": 5,
+          "z": 1,
           "direction": 1
         }
       }
@@ -176,30 +153,33 @@
     "collectibles": [],
     "interactibles": [],
     "finish": {
-      "x": 7,
+      "x": 1,
       "y": 1,
-      "z": 11
-    }
+      "z": 7
+    },
+    "obstacles": [
+      {
+        "id": "o1",
+        "type": "obstacle",
+        "modelKey": "wall.brick03",
+        "position": {
+          "x": 1,
+          "y": 1,
+          "z": 3
+        }
+      }
+    ]
   },
   "solution": {
     "type": "reach_target",
     "itemGoals": {},
-    "optimalBlocks": 17,
-    "optimalLines": 16,
+    "optimalBlocks": 8,
+    "optimalLines": 7,
     "rawActions": [
       "turnRight",
       "moveForward",
-      "moveForward",
-      "moveForward",
-      "turnLeft",
-      "moveForward",
-      "moveForward",
-      "moveForward",
-      "turnRight",
-      "moveForward",
-      "moveForward",
-      "moveForward",
-      "turnLeft",
+      "jump",
+      "jump",
       "moveForward",
       "moveForward",
       "moveForward"
@@ -214,14 +194,10 @@
           "type": "maze_moveForward"
         },
         {
-          "type": "maze_moveForward"
+          "type": "maze_jump"
         },
         {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_turn",
-          "direction": "turnLeft"
+          "type": "maze_jump"
         },
         {
           "type": "maze_moveForward"
@@ -231,7 +207,12 @@
         },
         {
           "type": "maze_moveForward"
-        },
+        }
+      ],
+      "procedures": {}
+    },
+    "structuredSolution_fixbug_version": {
+      "main": [
         {
           "type": "maze_turn",
           "direction": "turnRight"
@@ -240,14 +221,7 @@
           "type": "maze_moveForward"
         },
         {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_turn",
-          "direction": "turnLeft"
+          "type": "maze_jump"
         },
         {
           "type": "maze_moveForward"

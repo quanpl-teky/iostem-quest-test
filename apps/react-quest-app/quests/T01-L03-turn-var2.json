@@ -65,15 +65,7 @@
       {
         "modelKey": "ground.earth",
         "position": {
-          "x": 7,
-          "y": 0,
-          "z": 3
-        }
-      },
-      {
-        "modelKey": "ground.earth",
-        "position": {
-          "x": 7,
+          "x": 1,
           "y": 0,
           "z": 4
         }
@@ -81,7 +73,7 @@
       {
         "modelKey": "ground.earth",
         "position": {
-          "x": 7,
+          "x": 1,
           "y": 0,
           "z": 5
         }
@@ -89,7 +81,7 @@
       {
         "modelKey": "ground.earth",
         "position": {
-          "x": 7,
+          "x": 1,
           "y": 0,
           "z": 6
         }
@@ -97,41 +89,49 @@
       {
         "modelKey": "ground.earth",
         "position": {
-          "x": 8,
+          "x": 1,
           "y": 0,
-          "z": 6
+          "z": 7
         }
       },
       {
         "modelKey": "ground.earth",
         "position": {
-          "x": 9,
+          "x": 1,
           "y": 0,
-          "z": 6
+          "z": 8
         }
       },
       {
         "modelKey": "ground.earth",
         "position": {
-          "x": 10,
+          "x": 1,
           "y": 0,
-          "z": 6
+          "z": 9
         }
       },
       {
         "modelKey": "ground.earth",
         "position": {
-          "x": 11,
+          "x": 2,
           "y": 0,
-          "z": 6
+          "z": 4
         }
       },
       {
         "modelKey": "ground.earth",
         "position": {
-          "x": 12,
+          "x": 3,
           "y": 0,
-          "z": 6
+          "z": 4
+        }
+      },
+      {
+        "modelKey": "ground.earth",
+        "position": {
+          "x": 4,
+          "y": 0,
+          "z": 4
         }
       }
     ],
@@ -139,9 +139,9 @@
       {
         "id": "player1",
         "start": {
-          "x": 7,
+          "x": 1,
           "y": 1,
-          "z": 3,
+          "z": 9,
           "direction": 1
         }
       }
@@ -149,9 +149,9 @@
     "collectibles": [],
     "interactibles": [],
     "finish": {
-      "x": 12,
+      "x": 4,
       "y": 1,
-      "z": 6
+      "z": 4
     }
   },
   "solution": {
@@ -160,32 +160,19 @@
     "optimalBlocks": 11,
     "optimalLines": 10,
     "rawActions": [
-      "turnRight",
-      "moveForward",
-      "moveForward",
-      "moveForward",
       "turnLeft",
       "moveForward",
       "moveForward",
+      "moveForward",
+      "moveForward",
+      "moveForward",
+      "turnRight",
       "moveForward",
       "moveForward",
       "moveForward"
     ],
     "structuredSolution": {
       "main": [
-        {
-          "type": "maze_turn",
-          "direction": "turnRight"
-        },
-        {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_moveForward"
-        },
         {
           "type": "maze_turn",
           "direction": "turnLeft"
@@ -195,6 +182,19 @@
         },
         {
           "type": "maze_moveForward"
+        },
+        {
+          "type": "maze_moveForward"
+        },
+        {
+          "type": "maze_moveForward"
+        },
+        {
+          "type": "maze_moveForward"
+        },
+        {
+          "type": "maze_turn",
+          "direction": "turnRight"
         },
         {
           "type": "maze_moveForward"

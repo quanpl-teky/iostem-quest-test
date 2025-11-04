@@ -65,14 +65,6 @@
       {
         "modelKey": "ground.normal",
         "position": {
-          "x": 8,
-          "y": 0,
-          "z": 1
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
           "x": 9,
           "y": 0,
           "z": 1
@@ -101,13 +93,21 @@
           "y": 0,
           "z": 1
         }
+      },
+      {
+        "modelKey": "ground.normal",
+        "position": {
+          "x": 13,
+          "y": 0,
+          "z": 1
+        }
       }
     ],
     "players": [
       {
         "id": "player1",
         "start": {
-          "x": 8,
+          "x": 9,
           "y": 1,
           "z": 1,
           "direction": 1
@@ -117,7 +117,7 @@
     "collectibles": [],
     "interactibles": [],
     "finish": {
-      "x": 12,
+      "x": 13,
       "y": 1,
       "z": 1
     }

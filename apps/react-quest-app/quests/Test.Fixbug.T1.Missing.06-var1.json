@@ -1,17 +1,22 @@
 {
-  "id": "intro_02_collect_item-var1",
+  "id": "Test.Fixbug.T1.Missing.06-var1",
   "gameType": "maze",
   "grade": 4,
-  "topic": "topic-title-topic_01",
-  "level": 2,
-  "titleKey": "Challenge.intro_02_collect_item.Title",
-  "questTitleKey": "Challenge.intro_02_collect_item.Description",
-  "descriptionKey": "Challenge.intro_02_collect_item.Description",
+  "topic": "topic-title-topic_105_test_fixbug_t1_missing",
+  "level": 6,
+  "titleKey": "Challenge.Test.Fixbug.T1.Missing.06.Title",
+  "questTitleKey": "Challenge.Test.Fixbug.T1.Missing.06.Description",
+  "descriptionKey": "Challenge.Test.Fixbug.T1.Missing.06.Description",
   "translations": {
     "vi": {
-      "Challenge.intro_02_collect_item.Title": "Thu thập pha lê",
-      "Challenge.intro_02_collect_item.Description": "Di chuyển và sử dụng khối 'collect' để thu thập tất cả pha lê trên đường đi.",
-      "topic-title-topic_01": "Giới thiệu"
+      "Challenge.Test.Fixbug.T1.Missing.06.Title": "Sửa lỗi: Thiếu lệnh Thu thập",
+      "Challenge.Test.Fixbug.T1.Missing.06.Description": "Nhân vật đã đi qua viên ngọc quý mà không nhặt nó! Hãy đảm bảo bạn thêm lệnh 'thu thập' vào đúng vị trí để hoàn thành mục tiêu.",
+      "topic-title-topic_105_test_fixbug_t1_missing": "Kiểm tra Fixbug - Thiếu Lệnh"
+    },
+    "en": {
+      "Challenge.Test.Fixbug.T1.Missing.06.Title": "Fix the Bug: Missing Collect",
+      "Challenge.Test.Fixbug.T1.Missing.06.Description": "The character walked right past the crystal without picking it up! Make sure you add the 'collect' command at the right spot to complete the goal.",
+      "topic-title-topic_105_test_fixbug_t1_missing": "Kiểm tra Fixbug - Thiếu Lệnh"
     }
   },
   "supportedEditors": [
@@ -45,6 +50,10 @@
             {
               "kind": "block",
               "type": "maze_turn"
+            },
+            {
+              "kind": "block",
+              "type": "maze_jump"
             }
           ]
         },
@@ -56,78 +65,66 @@
             {
               "kind": "block",
               "type": "maze_collect"
+            },
+            {
+              "kind": "block",
+              "type": "maze_toggle_switch"
             }
           ]
         }
       ]
     },
-    "maxBlocks": 17,
-    "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"></statement></block></xml>"
+    "maxBlocks": 13,
+    "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"><block type=\"maze_turn\"><field name=\"DIR\">turnLeft</field><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\" /></next></block></next></block></next></block></next></block></next></block></statement></block></xml>"
   },
   "gameConfig": {
     "type": "maze",
     "renderer": "3d",
     "blocks": [
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.snow",
         "position": {
-          "x": 6,
+          "x": 4,
           "y": 0,
-          "z": 5
+          "z": 0
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.snow",
         "position": {
-          "x": 7,
+          "x": 4,
           "y": 0,
-          "z": 5
+          "z": 1
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.snow",
         "position": {
-          "x": 8,
+          "x": 4,
           "y": 0,
-          "z": 5
+          "z": 2
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.snow",
         "position": {
-          "x": 9,
+          "x": 4,
           "y": 0,
-          "z": 5
+          "z": 3
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.snow",
         "position": {
-          "x": 10,
+          "x": 4,
           "y": 0,
-          "z": 5
+          "z": 4
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "ground.snow",
         "position": {
-          "x": 11,
-          "y": 0,
-          "z": 5
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 12,
-          "y": 0,
-          "z": 5
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 13,
+          "x": 4,
           "y": 0,
           "z": 5
         }
@@ -137,7 +134,7 @@
       {
         "id": "player1",
         "start": {
-          "x": 6,
+          "x": 4,
           "y": 1,
           "z": 5,
           "direction": 1
@@ -149,62 +146,31 @@
         "id": "c1",
         "type": "crystal",
         "position": {
-          "x": 10,
+          "x": 4,
           "y": 1,
-          "z": 5
-        }
-      },
-      {
-        "id": "c2",
-        "type": "crystal",
-        "position": {
-          "x": 8,
-          "y": 1,
-          "z": 5
-        }
-      },
-      {
-        "id": "c3",
-        "type": "crystal",
-        "position": {
-          "x": 9,
-          "y": 1,
-          "z": 5
-        }
-      },
-      {
-        "id": "c4",
-        "type": "crystal",
-        "position": {
-          "x": 7,
-          "y": 1,
-          "z": 5
+          "z": 4
         }
       }
     ],
     "interactibles": [],
     "finish": {
-      "x": 13,
+      "x": 4,
       "y": 1,
-      "z": 5
+      "z": 0
     }
   },
   "solution": {
     "type": "reach_target",
     "itemGoals": {
-      "crystal": 4
+      "crystal": 1
     },
-    "optimalBlocks": 12,
-    "optimalLines": 11,
+    "optimalBlocks": 8,
+    "optimalLines": 7,
     "rawActions": [
+      "turnLeft",
       "moveForward",
       "collect",
       "moveForward",
-      "collect",
-      "moveForward",
-      "collect",
-      "moveForward",
-      "collect",
       "moveForward",
       "moveForward",
       "moveForward"
@@ -212,16 +178,8 @@
     "structuredSolution": {
       "main": [
         {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_collect"
-        },
-        {
-          "type": "maze_moveForward"
-        },
-        {
-          "type": "maze_collect"
+          "type": "maze_turn",
+          "direction": "turnLeft"
         },
         {
           "type": "maze_moveForward"
@@ -233,7 +191,28 @@
           "type": "maze_moveForward"
         },
         {
-          "type": "maze_collect"
+          "type": "maze_moveForward"
+        },
+        {
+          "type": "maze_moveForward"
+        },
+        {
+          "type": "maze_moveForward"
+        }
+      ],
+      "procedures": {}
+    },
+    "structuredSolution_fixbug_version": {
+      "main": [
+        {
+          "type": "maze_turn",
+          "direction": "turnLeft"
+        },
+        {
+          "type": "maze_moveForward"
+        },
+        {
+          "type": "maze_moveForward"
         },
         {
           "type": "maze_moveForward"

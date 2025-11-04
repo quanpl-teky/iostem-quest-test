@@ -1,17 +1,22 @@
 {
-  "id": "intro_06_u_shape_path-var1",
+  "id": "Test.Fixbug.T1.Logic.09-var1",
   "gameType": "maze",
   "grade": 4,
-  "topic": "topic-title-topic_01",
-  "level": 6,
-  "titleKey": "Challenge.intro_06_u_shape_path.Title",
-  "questTitleKey": "Challenge.intro_06_u_shape_path.Description",
-  "descriptionKey": "Challenge.intro_06_u_shape_path.Description",
+  "topic": "topic-title-topic_105_test_fixbug_t1_missing",
+  "level": 9,
+  "titleKey": "Challenge.Test.Fixbug.T1.Logic.09.Title",
+  "questTitleKey": "Challenge.Test.Fixbug.T1.Logic.09.Description",
+  "descriptionKey": "Challenge.Test.Fixbug.T1.Logic.09.Description",
   "translations": {
     "vi": {
-      "Challenge.intro_06_u_shape_path.Title": "Đường đi chữ U",
-      "Challenge.intro_06_u_shape_path.Description": "Luyện tập kỹ năng rẽ với đường đi hình chữ U.",
-      "topic-title-topic_01": "Giới thiệu"
+      "Challenge.Test.Fixbug.T1.Logic.09.Title": "Sửa lỗi: Rẽ Sai Hướng",
+      "Challenge.Test.Fixbug.T1.Logic.09.Description": "Nhân vật cần rẽ phải để đến đích, nhưng chương trình lại dùng lệnh rẽ trái. Hãy tìm khối lệnh sai và thay thế nó.",
+      "topic-title-topic_105_test_fixbug_t1_missing": "Kiểm tra Fixbug - Thiếu Lệnh"
+    },
+    "en": {
+      "Challenge.Test.Fixbug.T1.Logic.09.Title": "Fix the Bug: Wrong Direction",
+      "Challenge.Test.Fixbug.T1.Logic.09.Description": "The character needs to turn right to reach the goal, but the code is telling it to turn left. Find the incorrect block and replace it.",
+      "topic-title-topic_105_test_fixbug_t1_missing": "Kiểm tra Fixbug - Thiếu Lệnh"
     }
   },
   "supportedEditors": [
@@ -45,44 +50,47 @@
             {
               "kind": "block",
               "type": "maze_turn"
+            },
+            {
+              "kind": "block",
+              "type": "maze_jump"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "%{BKY_GAMES_CATACTIONS}",
+          "categorystyle": "actions_category",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "maze_collect"
+            },
+            {
+              "kind": "block",
+              "type": "maze_toggle_switch"
             }
           ]
         }
       ]
     },
-    "maxBlocks": 19,
-    "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"></statement></block></xml>"
+    "maxBlocks": 13,
+    "startBlocks": "<xml><block type=\"maze_start\" deletable=\"false\" movable=\"false\"><statement name=\"DO\"><block type=\"maze_turn\"><field name=\"DIR\">turnRight</field><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_turn\"><field name=\"DIR\">turnLeft</field><next><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\" /></next></block></next></block></next></block></next></block></next></block></next></block></statement></block></xml>"
   },
   "gameConfig": {
     "type": "maze",
     "renderer": "3d",
     "blocks": [
       {
-        "modelKey": "ground.normal",
+        "modelKey": "stone.stone04",
         "position": {
-          "x": 8,
+          "x": 7,
           "y": 0,
-          "z": 9
+          "z": 12
         }
       },
       {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 8,
-          "y": 0,
-          "z": 10
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 8,
-          "y": 0,
-          "z": 11
-        }
-      },
-      {
-        "modelKey": "ground.normal",
+        "modelKey": "stone.stone04",
         "position": {
           "x": 8,
           "y": 0,
@@ -90,57 +98,33 @@
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "stone.stone04",
         "position": {
           "x": 9,
           "y": 0,
-          "z": 12
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 10,
-          "y": 0,
-          "z": 12
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 11,
-          "y": 0,
-          "z": 12
-        }
-      },
-      {
-        "modelKey": "ground.normal",
-        "position": {
-          "x": 12,
-          "y": 0,
           "z": 9
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "stone.stone04",
         "position": {
-          "x": 12,
+          "x": 9,
           "y": 0,
           "z": 10
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "stone.stone04",
         "position": {
-          "x": 12,
+          "x": 9,
           "y": 0,
           "z": 11
         }
       },
       {
-        "modelKey": "ground.normal",
+        "modelKey": "stone.stone04",
         "position": {
-          "x": 12,
+          "x": 9,
           "y": 0,
           "z": 12
         }
@@ -150,7 +134,7 @@
       {
         "id": "player1",
         "start": {
-          "x": 8,
+          "x": 9,
           "y": 1,
           "z": 9,
           "direction": 1
@@ -160,28 +144,22 @@
     "collectibles": [],
     "interactibles": [],
     "finish": {
-      "x": 12,
+      "x": 7,
       "y": 1,
-      "z": 9
+      "z": 12
     }
   },
   "solution": {
     "type": "reach_target",
     "itemGoals": {},
-    "optimalBlocks": 14,
-    "optimalLines": 13,
+    "optimalBlocks": 8,
+    "optimalLines": 7,
     "rawActions": [
       "turnRight",
       "moveForward",
       "moveForward",
       "moveForward",
-      "turnLeft",
-      "moveForward",
-      "moveForward",
-      "moveForward",
-      "moveForward",
-      "turnLeft",
-      "moveForward",
+      "turnRight",
       "moveForward",
       "moveForward"
     ],
@@ -202,10 +180,22 @@
         },
         {
           "type": "maze_turn",
-          "direction": "turnLeft"
+          "direction": "turnRight"
         },
         {
           "type": "maze_moveForward"
+        },
+        {
+          "type": "maze_moveForward"
+        }
+      ],
+      "procedures": {}
+    },
+    "structuredSolution_fixbug_version": {
+      "main": [
+        {
+          "type": "maze_turn",
+          "direction": "turnRight"
         },
         {
           "type": "maze_moveForward"
@@ -219,9 +209,6 @@
         {
           "type": "maze_turn",
           "direction": "turnLeft"
-        },
-        {
-          "type": "maze_moveForward"
         },
         {
           "type": "maze_moveForward"
